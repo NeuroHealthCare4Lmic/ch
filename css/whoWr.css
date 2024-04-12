@@ -1,0 +1,67 @@
+/* Custom properties/variables  */
+:root {
+  --main-white: #f0f0f0;
+  --main-red: #be3144;
+  --main-blue: #45567d;
+  --main-gray: #303841;
+  --main-lgray: #f9f9f9;
+  --main-dblue: #00004d;
+}
+
+body {
+  font-family: "Giga Sans", 'Raleway', Monolith, Gilroy, Poppins, sans-serif;
+  margin: 0;
+  padding: 0;
+  letter-spacing: .2rem;
+  background-color: lightyellow;
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.head {
+  font-size: 1.3rem;
+  line-height: 2;
+  padding: 50px 50px;
+  letter-spacing: 0.1rem;
+  word-spacing: 0.5rem;
+}
+
+.head h2 {
+  text-shadow: 3px 3px 2px var(--main-white);
+  color: #353935;
+  line-height: 2.2;
+  font-size: 3rem;
+}
+
+footer {
+  background-image: linear-gradient(0deg, #AFE1AF -23.14%, #4CBB17 82.67%, #4CBB17 82.67%);
+  color: #fff;
+  font-family: "Giga Sans", 'Raleway', Monolith, Gilroy, Poppins, sans-serif;
+  text-align: center;
+  padding: 15px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  margin: auto;
+}
+footer>p {
+  font-size: .9rem;
+}
+
+
+@media only screen and (max-width: 800px) {
+  .head {
+    font-size: 1rem;
+  }
+
+  .head h2 {
+    font-size: 1.5rem;
+  }
+
+  footer>p {
+    font-size: 0.7rem;
+  }
+}
