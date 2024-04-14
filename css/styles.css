@@ -232,9 +232,7 @@ ul.para {
     border-top-color: var(--main-white);
   }
 
-  header img {
-    height: 5rem;
-  }
+
 
   .contact-us {
     font-size: 0.8rem;
@@ -255,8 +253,9 @@ main #aboutUs {
   }
 
   .contact-links a {
-    font-size: 1.2rem;
-  }
+    font-size: 1.1rem;
+    width: 1%;
+    }
 
 
 

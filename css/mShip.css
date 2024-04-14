@@ -58,6 +58,9 @@ footer>p {
 }
 
 
+.last{
+      padding-top: 20px;
+}
 
 @media only screen and (max-width: 800px) {
   .head {
@@ -68,10 +71,6 @@ footer>p {
     font-size: 1.5rem;
   }
 
-  footer>p {
-    font-size: 0.7rem;
-  }
-  .last{
-        padding: 20px;
-  }
+
+
 }
