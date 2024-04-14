@@ -47,7 +47,7 @@ header li:nth-child(6) {
 }
 
 header img {
-  height: 5rem;
+  height: 6rem;
   /* Adjust the height as needed */
   margin-left: 20px;
 }
@@ -82,7 +82,7 @@ header img {
 
 /* Main styles */
 main {
-  padding: 50px;
+  padding: 10px;
   flex: 1;
   letter-spacing: .1rem;
 }
@@ -91,7 +91,7 @@ main {
 .aboutUs {
   margin-bottom: 30px;
   background-color: var(--main-whitcolor);
-  padding: 20px;
+  padding: 10px;
   line-height: 2;
   font-size: 1.3rem;
   align-items: stretch;
@@ -102,17 +102,17 @@ main {
 .aboutUs h2 {
   text-shadow: 3px 3px 2px var(--main-white);
   color: var(--main-gblack);
-  font-size: 3rem;
+  font-size: 2.5rem;
   letter-spacing: 0.1rem;
 }
 
 .pSpace {
   line-height: 2;
-  padding: 20px;
 }
 
 .contact-us {
   padding-top: 100px;
+  padding-left: 20px;
 }
 
 .contact-us h2 {
@@ -177,7 +177,6 @@ footer {
 
 ul.para {
   list-style-image: linear-gradient(to left bottom, green, yellow);
-  margin-left: 30px;
   list-style-position: outside;
 }
 
@@ -234,23 +233,25 @@ ul.para {
   }
 
   header img {
-    height: 4rem;
+    height: 5rem;
   }
 
   .contact-us {
     font-size: 0.8rem;
   }
 
-  #aboutUs {
-    font-size: 0.4rem;
-  }
+
+main #aboutUs {
+  font-size: 1rem;
+  padding: 5px;
+}
 
   section h2.aboutHead {
     font-size: 1.5rem;
   }
 
   footer {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
   }
 
   .contact-links a {
@@ -267,11 +268,11 @@ ul.para {
   }
 
   #aboutUs {
-    font-size: 0.7rem
+    font-size: 1rem
   }
 
   .aboutUs h2 {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
   }
 
 

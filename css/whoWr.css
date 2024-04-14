@@ -24,7 +24,7 @@ a {
 .head {
   font-size: 1.3rem;
   line-height: 2;
-  padding: 50px 50px;
+  padding: 50px 20px;
   letter-spacing: 0.1rem;
   word-spacing: 0.5rem;
 }
@@ -34,6 +34,9 @@ a {
   color: #353935;
   line-height: 2.2;
   font-size: 3rem;
+}
+.last{
+      padding: 20px;
 }
 
 footer {
@@ -53,15 +56,17 @@ footer>p {
 
 
 @media only screen and (max-width: 800px) {
+
   .head {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
 
   .head h2 {
     font-size: 1.5rem;
   }
-
-  footer>p {
-    font-size: 0.7rem;
+  .para{
+    padding-bottom: 30px;
   }
+
+
 }

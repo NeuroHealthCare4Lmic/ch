@@ -23,14 +23,12 @@ a {
 }
 
 .head {
-  font-size: 20px;
-  line-height: 2.2;
-  padding: 50px 50px;
+  font-size: 1.3rem;
+  line-height: 2;
+  padding: 50px 20px;
   letter-spacing: 0.1rem;
   word-spacing: 0.5rem;
-
 }
-
 .head h2 {
   text-shadow: 3px 3px 2px var(--main-white);
   color: #353935;
@@ -65,14 +63,17 @@ footer>p {
 }
 
 header>h3.heading {
-  font-size: 30px;
+  font-size: 3rem;
 }
 
 .pic {
   padding: 10px 10px;
   text-align: center;
   line-height: 0.5;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
+  letter-spacing: 0.1rem;
+
+
 }
 
 .pic h2 {
@@ -81,27 +82,40 @@ header>h3.heading {
 
 .pic img {
   border-radius: 100px;
-  width: 20%;
+  width: 30%;
+}
+.last{
+      padding-top: 20px;
 }
 
+.subT {
+  font-size: 0.7rem;
+  padding: 10px;
+  letter-spacing: normal;
+  word-spacing: 0.1rem;
+}
+.pSpace{
+  padding-bottom: 10px;
+}
 @media only screen and (max-width: 800px) {
   .pic {
-    font-size: 0.3rem;
+    font-size: 0.7rem;
   }
 
   .pic h2 {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
 
   .head h2 {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
 
   .head {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
 
-  footer>p {
-    font-size: 0.7rem;
+  .pSpace {
+  font-size: 1rem;
+
   }
 }
