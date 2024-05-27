@@ -38,7 +38,7 @@ a {
 }
 
 .pic-contain{
-padding: 30px;
+padding: 50px;
 font-size: 1rem;
 text-align: center;
 }
@@ -55,6 +55,9 @@ text-align: center;
   padding-bottom: 80px;
 }
 
+.pic-contain h3{
+  padding-bottom: 60px;
+}
 footer {
   background-image: linear-gradient(0deg, #AFE1AF -23.14%, #4CBB17 82.67%, #4CBB17 82.67%);
   color: #fff;
