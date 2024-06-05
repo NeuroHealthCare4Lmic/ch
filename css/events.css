@@ -58,6 +58,14 @@ text-align: center;
 .pic-contain h3{
   padding-bottom: 60px;
 }
+.pic-contain iframe{
+padding: 0 0 60px 0;
+border: none;
+height: 100vh;
+width: 100%;
+}
+
+}
 footer {
   background-image: linear-gradient(0deg, #AFE1AF -23.14%, #4CBB17 82.67%, #4CBB17 82.67%);
   color: #fff;
