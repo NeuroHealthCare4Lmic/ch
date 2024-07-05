@@ -51,6 +51,12 @@ color: orange;
   padding-bottom: 50px;
 }
 
+.grey{
+  background-color:#FFFF8F;
+
+
+
+}
 footer {
   background-image: linear-gradient(0deg, #AFE1AF -23.14%, #4CBB17 82.67%, #4CBB17 82.67%);
   color: #fff;
