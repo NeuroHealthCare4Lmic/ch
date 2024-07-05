@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>🇨🇭Neuro Health Care 4 LMIC</title>
   <link rel="stylesheet" href="./css/styles.css">
-  <link rel ="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -14,16 +14,31 @@
 
 <body>
   <header>
-    <img src="./img/logo.png" alt="NeuroHealth4LMIC">
+    <a href="./index.html"><img src="./img/logo.png" alt="NeuroHealth4LMIC logo"></a>
     <div class="icon" onclick="toggleMenu()"><i class="fa-solid fa-bars"></i></div>
     <nav class="topnav" id="myTopnav">
       <ul>
-        <li><a href="#aboutUs">About us</a></li>
-        <li><a href="./whoWr.html">Who we are</a></li>
-        <li><a href="./fMemb.html">Founding members</a></li>
+        <li><a href="./index.html">About us</a>
+          <ul class="dropdown-content">
+            <li><a href="./whoWr.html">Who we are</a></li>
+            <li><a href="./fMemb.html">Founding members</a></li>
+          </ul>
+        </li>
+
+        <li><a href="./index.html">Sessions</a>
+          <ul class="dropdown-content">
         <li><a href="./events.html">Events</a></li>
-        <li><a href="./mShip.html">Membership</a></li>
+        <li><a href="./programs.html">Programs</a></li>
+      </ul>
+      </li>
+
+        <li><a href="./mShip.html">Membership</a>
+          <ul class="dropdown-content">
+        <li><a href="./donate.html">Donate</a></li>
+      </ul>
+        </li>
         <li><a href="#contact-us">Contact</a></li>
+
         <li><a href="#">🇫🇷⌄</a></li>
       </ul>
     </nav>
@@ -32,32 +47,39 @@
   <main id="main">
     <section class="aboutUs" id="aboutUs">
       <h2 class="aboutHead">About Neuro Health Care 4 LMIC</h2>
-      <p class ="pSpace">Neuro Health Care 4 LMIC is a registered association under Articles 60 et seq. of the Swiss Civil Code ("CC"). Established for an indefinite duration, our association is headquartered in the Canton of Geneva. Our core objective is to foster
+      <p class="pSpace">Neuro Health Care 4 LMIC is a registered association under Articles 60 et seq. of the Swiss Civil Code ("CC"). Established for an indefinite duration, our association is headquartered in the Canton of Geneva. Our core
+        objective is to foster
         productive partnerships and collaborations with governments, esteemed hospitals, and institutes in Low- and Middle-Income Countries (LMICs) worldwide.</p>
-      <p class ="pSpace">At Neuro Health Care 4 LMIC, we are committed to enhancing local expertise in various domains, including Neurology, Neuroanatomy, Neurodiagnostics, and Endovascular and Neurosurgical treatments, within LMICs. Through our collaborative
+      <p class="pSpace">At Neuro Health Care 4 LMIC, we are committed to enhancing local expertise in various domains, including Neurology, Neuroanatomy, Neurodiagnostics, and Endovascular and Neurosurgical treatments, within LMICs. Through our
+        collaborative
         efforts, we aspire to empower healthcare professionals in LMICs, thereby advancing the quality of neurological care and treatment accessible to communities in need across the globe.</p>
 
       <h2 class="aboutHead">Our Missions</h2>
       <ul class="para">
-        <li class="par pSpace"><b><i>Conducting Educational Events:</b></i> Whether <b>onsite</b> or <b>online</b>, we are committed to organizing workshops, lectures, meetings, seminars, conferences, and clinical support sessions. These events serve to
+        <li class="par pSpace"><b><i>Conducting Educational Events:</b></i> Whether <b>onsite</b> or <b>online</b>, we are committed to organizing workshops, lectures, meetings, seminars, conferences, and clinical support sessions. These events serve
+          to
           enhance the knowledge and skills of healthcare professionals involved in Neuro Health Care in LMICs.
         </li>
-        <li class="par pSpace"><b><i>Raising Public Awareness:</b></i> We strive to spread awareness about stroke, brain and spine injuries, accident & trauma prevention, and management through various channels, including social media, newspaper articles,
+        <li class="par pSpace"><b><i>Raising Public Awareness:</b></i> We strive to spread awareness about stroke, brain and spine injuries, accident & trauma prevention, and management through various channels, including social media, newspaper
+          articles,
           and collaboration with governmental and non-governmental organizations (NGOs). By engaging the public, we aim to promote preventive measures and improve outcomes for individuals affected by neurological conditions.
         </li>
         <li class="par pSpace"><b><i>Building Partnerships:</b></i> We seek to develop collaborative relationships with international organizations and NGOs that share our goals and objectives. By leveraging collective expertise and resources, we can
           amplify our impact and reach more communities in need.
         </li>
-        <li class="par pSpace"><b><i>Establishing Neuro Diagnostic Centers:</b></i> In partnership with industry companies, we aim to initiate or enhance Neuro diagnostic centers in LMICs. This involves providing essential diagnostic equipment such as
+        <li class="par pSpace"><b><i>Establishing Neuro Diagnostic Centers:</b></i> In partnership with industry companies, we aim to initiate or enhance Neuro diagnostic centers in LMICs. This involves providing essential diagnostic equipment such
+          as
           Ultrasound Systems, CT, MRI, and Angiography Units, along with comprehensive <b>training and teleradiological services</b> to support accurate diagnosis and treatment planning.
         </li>
-        <li class="par pSpace"><b><i>Improving Operating Setups:</b></i> We are dedicated to establishing new and upgrading existing operating setups in LMICs. By investing in infrastructure and technology, we can enhance surgical capabilities and ensure
+        <li class="par pSpace"><b><i>Improving Operating Setups:</b></i> We are dedicated to establishing new and upgrading existing operating setups in LMICs. By investing in infrastructure and technology, we can enhance surgical capabilities and
+          ensure
           access to essential Neuro surgical interventions for patients in underserved areas.
         </li>
         <li class="par pSpace"><b><i>Human Resource Development:</b></i> We prioritize human resource training to facilitate the gradual escalation of clinical facilities at the doorstep of LMICs. By empowering local healthcare professionals with
           <b>specialized training</b>, we aim to build sustainable healthcare systems capable of delivering high-quality Neuro Health Care services.
         </li>
-        <li class="par pSpace"><b><i>Neuro Rehabilitation:</b></i> Recognizing the importance of rehabilitation in the recovery process, we advocate for and support Neuro rehabilitation initiatives in LMICs. Our goal is to ensure that individuals with
+        <li class="par pSpace"><b><i>Neuro Rehabilitation:</b></i> Recognizing the importance of rehabilitation in the recovery process, we advocate for and support Neuro rehabilitation initiatives in LMICs. Our goal is to ensure that individuals
+          with
           neurological conditions receive comprehensive care, including rehabilitation services, to optimize their functional outcomes and quality of life.
         </li>
         <li class="par pSpace"><b><i>Collaborating for Equipment Provision: </b></i>In collaboration with industry partners and donors, we work to secure essential equipment for establishing new or enhancing existing diagnostic, operating, and Neuro
@@ -66,13 +88,16 @@
       </ul>
       <h2 class="aboutHead">Our Values</h2>
       <ul class="para">
-        <li class="par pSpace"><b><i>Accessible Neuro Health Services:</b></i> We are dedicated to providing essential Neuro Health services at affordable costs, directly to the doorsteps of individuals residing in Low- and Middle-Income Countries (LMICs).
+        <li class="par pSpace"><b><i>Accessible Neuro Health Services:</b></i> We are dedicated to providing essential Neuro Health services at affordable costs, directly to the doorsteps of individuals residing in Low- and Middle-Income Countries
+          (LMICs).
           Our goal is to ensure that quality neurological care is accessible to all, regardless of socioeconomic status.
         </li>
-        <li class="par pSpace"><b><i>⁠Teaching & Training:</b></i> In the challenging environments characteristic of LMICs, we prioritize the education and training of Neuro Health care workers. By imparting knowledge and skills, we aim to empower local
+        <li class="par pSpace"><b><i>⁠Teaching & Training:</b></i> In the challenging environments characteristic of LMICs, we prioritize the education and training of Neuro Health care workers. By imparting knowledge and skills, we aim to empower
+          local
           healthcare professionals to deliver effective neurological care and address the unique healthcare needs of their communities.
         </li>
-        <li span class="par pSpace"><b><i>Comprehensive Solutions:</b></i> We believe in offering holistic solutions to every phase of Neuro Health Care in LMICs. From prevention and diagnosis to treatment and rehabilitation, our approach encompasses all
+        <li span class="par pSpace"><b><i>Comprehensive Solutions:</b></i> We believe in offering holistic solutions to every phase of Neuro Health Care in LMICs. From prevention and diagnosis to treatment and rehabilitation, our approach encompasses
+          all
           aspects of neurological care. By providing comprehensive services, we strive to make a meaningful and lasting impact on the health and well-being of individuals in LMICs.
         </li>
       </ul>
@@ -94,7 +119,7 @@
       <h2>Reach us @</h2>
       <div class="contact-links" id="contact-links">
         <a href="https://www.linkedin.com/company/neuro-health-care-4-lmic/" target="_blank" class="btn contact-details"><i class="fa-brands fa-linkedin-in"></i></a>
-        <a href="https://twitter.com/" target="_blank" class="btn contact-details"><i class="fa-brands fa-x-twitter"></i></a>
+        <!--<a href="https://twitter.com/" target="_blank" class="btn contact-details"><i class="fa-brands fa-x-twitter"></i></a>-->
         <a href="https://www.instagram.com/neurohealthcare4lmic/" target="_blank" class="btn contact-details"><i class="fa-brands fa-instagram"></i></a>
         <!--<a href="https://facebook.com/" target="_blank" class="btn contact-details"><i class="fa-brands fa-facebook"></i></a>-->
         <a href="mailto:nsattapk@hotmail.com" class="btn contact-details"><i class="fa-sharp fa-regular fa-envelope"></i></a>

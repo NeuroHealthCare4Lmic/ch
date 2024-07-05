@@ -21,13 +21,13 @@ a {
   text-decoration: none;
 }
 
+
 .head {
-  font-size: 1rem;
+  font-size: 1.3rem;
   line-height: 2;
-  padding: 50px 20px;
+  padding: 90px 20px;
   letter-spacing: 0.1rem;
   word-spacing: 0.5rem;
-  font-size: 1.3rem;
 }
 
 .head h1 {
@@ -37,19 +37,16 @@ a {
   font-size: 3rem;
   text-align: center;
 }
-.head ul{
-  list-style-type: none;
-  text-align: left;
-  padding-left: 50px;
-}
 
 .head h2 {
 color: orange;
 }
 
-.mem {
+.head h3{
+  text-align: center;
   padding-bottom: 50px;
 }
+
 
 footer {
   background-image: linear-gradient(0deg, #AFE1AF -23.14%, #4CBB17 82.67%, #4CBB17 82.67%);

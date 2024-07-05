@@ -24,7 +24,7 @@ a {
 .head {
   font-size: 1.3rem;
   line-height: 2;
-  padding: 50px 50px;
+  padding: 50px 20px;
   letter-spacing: 0.1rem;
   word-spacing: 0.5rem;
   text-align: center;
@@ -52,7 +52,18 @@ text-align: center;
   object-fit: cover;
   margin-left: auto;
   margin-right: auto;
-  padding-bottom: 80px;
+  padding-top: 80px;
+}
+
+
+figcaption {
+  background-color: black;
+  color: white;
+  font-style: italic;
+  padding: 2px;
+  text-align: center;
+  font-size: 70%;
+
 }
 
 .pic-contain h3{

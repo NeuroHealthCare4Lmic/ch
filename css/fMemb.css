@@ -40,7 +40,7 @@ a {
   color: #353935;
 }
 
-img {
+.pic < img {
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -62,9 +62,6 @@ footer>p {
   font-size: .9rem;
 }
 
-header>h3.heading {
-  font-size: 3rem;
-}
 
 .pic {
   padding: 10px 10px;

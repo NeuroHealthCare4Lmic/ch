@@ -27,6 +27,7 @@ a {
   padding: 50px 20px;
   letter-spacing: 0.1rem;
   word-spacing: 0.5rem;
+
 }
 
 .head h2 {
@@ -34,9 +35,7 @@ a {
   color: #353935;
   line-height: 2.2;
   font-size: 3rem;
-}
-.last{
-      padding: 20px;
+  text-align: center;
 }
 
 footer {
