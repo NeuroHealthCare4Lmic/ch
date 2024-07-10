@@ -11,3 +11,17 @@ menuItems.forEach(function(item) {
     menu.classList.remove("active");
   });
 });
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const dropdowns = document.querySelectorAll('.dropdown > a');
+
+    dropdowns.forEach(dropdown => {
+        dropdown.addEventListener('click', function(event) {
+          if (window.innerWidth <= 920) {
+                         event.preventDefault();
+                         this.parentElement.classList.toggle('active');
+                     }
+                 });
+             });
+         });
