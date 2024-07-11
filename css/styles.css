@@ -71,7 +71,6 @@ header img {
   padding: 12px 16px;
   text-decoration: none;
   display: block;
-  text-align: left;
 }
 
 .topnav ul li .dropdown-content {
@@ -274,7 +273,7 @@ header img {
 
   .topnav ul li {
     margin-right: 0;
-    padding: 10px;
+    padding: 10px 0 10px 0;
     text-align: center;
     width: 100%;
     font-size: 1rem;
@@ -308,9 +307,9 @@ main #aboutUs {
     width: 1%;
     }
 
-  .topnav ul li.active .dropdown-content {
-    display: block;
-}
+    .topnav ul li.active .dropdown-content {
+        display: block;
+      }
 
 }
 
