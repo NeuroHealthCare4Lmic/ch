@@ -27,7 +27,7 @@ a {
 .head {
   font-size: 1.3rem;
   line-height: 2;
-  padding: 50px 20px;
+  padding: 50px 10px;
   letter-spacing: 0.1rem;
   word-spacing: 0.5rem;
   text-align: center;
@@ -42,7 +42,7 @@ a {
 
 .pic-contain{
 font-size: 1rem;
-padding-left: 20px;
+p
 }
 .spane{
   color: blue;
@@ -52,14 +52,12 @@ padding-left: 20px;
   width: 100%;
   display: block;
   object-fit: cover;
-  margin-left: auto;
-  margin-right: auto;
   padding-top: 80px;
 }
 
 .review img{
   margin-bottom: auto;
-  width: 40%;
+  width: 80%;
   height: 10%;
   justify-content: center;
   display: flex;
@@ -111,7 +109,7 @@ footer {
 }
 
 footer>p {
-  font-size: .9rem;
+  font-size: 1.2rem;
 }
 
 .last{
@@ -122,19 +120,10 @@ section {
   flex: 1;
 }
 @media only screen and (max-width: 800px) {
-  .head {
-    font-size: 1rem;
-  }
 
-  .head h2 {
-    font-size: 1.5rem;
-  }
+.review > h2 {
+  font-size: 1.2rem;
+}
 
-  h3 {
-    font-size: 1.1rem;
-  }
 
-  h2 {
-    font-size: 1.1rem;
-  }
 }

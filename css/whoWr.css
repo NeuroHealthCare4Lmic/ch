@@ -50,19 +50,13 @@ footer {
   margin: auto;
 }
 footer>p {
-  font-size: .9rem;
+  font-size: 1.2rem;
 }
 
 
 @media only screen and (max-width: 800px) {
 
-  .head {
-    font-size: 1.1rem;
-  }
-
-  .head h2 {
-    font-size: 1.5rem;
-  }
+  
   .para{
     padding-bottom: 30px;
   }

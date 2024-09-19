@@ -59,7 +59,7 @@ footer {
 }
 
 footer>p {
-  font-size: .9rem;
+  font-size: 1.2rem;
 }
 
 
@@ -67,7 +67,7 @@ footer>p {
   padding: 10px 10px;
   text-align: center;
   line-height: 0.5;
-  font-size: 0.9rem;
+  font-size: 1.2rem;
   letter-spacing: 0.1rem;
 
 
@@ -79,14 +79,14 @@ footer>p {
 
 .pic img {
   border-radius: 100px;
-  width: 25%;
+  width: 35%;
 }
 .last{
       padding-top: 20px;
 }
 
 .subT {
-  font-size: 0.7rem;
+  font-size: 0.9rem;
   padding: 10px;
   letter-spacing: normal;
   word-spacing: 0.1rem;
@@ -96,7 +96,7 @@ footer>p {
 }
 @media only screen and (max-width: 800px) {
   .pic {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
   }
 
   .pic h2 {
@@ -104,7 +104,7 @@ footer>p {
   }
 
   .head h2 {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
 
   .head {
@@ -114,5 +114,9 @@ footer>p {
   .pSpace {
   font-size: 1rem;
 
+  }
+
+  .pic img {
+    width: 45%;
   }
 }
