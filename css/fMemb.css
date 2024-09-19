@@ -64,7 +64,7 @@ footer>p {
 
 
 .pic {
-  padding: 10px 10px;
+  padding: 20px 10px;
   text-align: center;
   line-height: 0.5;
   font-size: 1.2rem;
@@ -86,17 +86,18 @@ footer>p {
 }
 
 .subT {
-  font-size: 0.9rem;
+  font-size: 0.6rem;
   padding: 10px;
   letter-spacing: normal;
   word-spacing: 0.1rem;
 }
 .pSpace{
   padding-bottom: 10px;
+  margin-bottom: 20px;
 }
 @media only screen and (max-width: 800px) {
   .pic {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
   }
 
   .pic h2 {
