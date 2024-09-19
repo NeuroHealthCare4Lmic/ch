@@ -324,5 +324,8 @@ main #aboutUs {
     font-size: 1.5rem;
   }
 
-
+body{
+  text-align: justify;
+  padding-right: 5px;
+}
 }
