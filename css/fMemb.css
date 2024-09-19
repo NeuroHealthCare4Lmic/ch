@@ -59,7 +59,7 @@ footer {
 }
 
 footer>p {
-  font-size: 1.1rem;
+  font-size: 0.9rem;
 }
 
 
@@ -86,7 +86,7 @@ footer>p {
 }
 
 .subT {
-  font-size: 0.6rem;
+  font-size: 0.8rem;
   padding: 10px;
   letter-spacing: normal;
   word-spacing: 0.1rem;
@@ -97,7 +97,7 @@ footer>p {
 }
 @media only screen and (max-width: 800px) {
   .pic {
-    font-size: 0.7rem;
+    font-size: 0.9rem;
   }
 
   .pic h2 {
