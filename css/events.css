@@ -42,7 +42,10 @@ a {
 
 .pic-contain{
 font-size: 1rem;
-p
+margin-bottom: 4rem;
+margin-left: -30px;
+margin-right: -30px;
+
 }
 .spane{
   color: blue;
@@ -69,6 +72,7 @@ p
 
 .review h2 {
   margin-left: 20px;
+  text-align: center;
 }
 
 figcaption {
@@ -83,6 +87,7 @@ figcaption {
 
 .pic-contain h2{
   padding-top: 60px;
+  text-align: center;
 }
 .pic-contain h3{
   padding-bottom: 60px;
@@ -102,7 +107,7 @@ footer {
   font-family: "Giga Sans", 'Raleway', Monolith, Gilroy, Poppins, sans-serif;
   position: fixed;
   text-align: center;
-  padding: 10px 0;
+  padding: 15px 0;
   bottom: 0;
   width: 100%;
 
@@ -113,7 +118,7 @@ footer>p {
 }
 
 .last{
-      padding: 20px;
+  padding: 20px;
 }
 
 section {
@@ -125,5 +130,8 @@ section {
   font-size: 1.2rem;
 }
 
+.head h2 {
+  font-size: 2rem;
+}
 
 }

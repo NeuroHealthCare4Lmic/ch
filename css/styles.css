@@ -121,7 +121,7 @@ main {
 
 /* About Us section styles */
 .aboutUs {
-  margin-bottom: 30px;
+  margin-bottom: 50px;
   padding: 10px;
   line-height: 2;
   font-size: 1.3rem;
@@ -172,7 +172,7 @@ footer {
   text-align: center;
   padding: 10px 0;
   width: 100%;
-  position: relative;
+  position: fixed;
   bottom: 0;
 
 }
@@ -321,11 +321,11 @@ main #aboutUs {
 
 
   .aboutUs h2 {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
 
 body{
   text-align: justify;
   padding-right: 5px;
-}
+  hyphens: auto;}
 }

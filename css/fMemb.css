@@ -6,7 +6,7 @@
   --main-gray: #303841;
   --main-lgray: #f9f9f9;
   --main-dblue: #00004d;
-  --main-lyellow : lightyellow;
+  --main-lyellow: lightyellow;
 }
 
 body {
@@ -29,10 +29,12 @@ a {
   letter-spacing: 0.1rem;
   word-spacing: 0.5rem;
 }
+
 .head h2 {
   text-shadow: 3px 3px 2px var(--main-white);
   color: #353935;
-  font-size: 4rem;
+  line-height: 2.2;
+  font-size: 3rem;
   text-align: center;
 }
 
@@ -51,7 +53,7 @@ footer {
   color: #fff;
   font-family: "Giga Sans", 'Raleway', Monolith, Gilroy, Poppins, sans-serif;
   text-align: center;
-  padding: 10px 0;
+  padding: 15px 0;
   position: fixed;
   bottom: 0;
   width: 100%;
@@ -59,9 +61,8 @@ footer {
 }
 
 footer>p {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
 }
-
 
 .pic {
   padding: 20px 10px;
@@ -69,8 +70,6 @@ footer>p {
   line-height: 0.5;
   font-size: 1.2rem;
   letter-spacing: 0.1rem;
-
-
 }
 
 .pic h2 {
@@ -81,8 +80,9 @@ footer>p {
   border-radius: 100px;
   width: 35%;
 }
-.last{
-      padding-top: 20px;
+
+.last {
+  padding-top: 20px;
 }
 
 .subT {
@@ -91,10 +91,12 @@ footer>p {
   letter-spacing: normal;
   word-spacing: 0.1rem;
 }
-.pSpace{
+
+.pSpace {
   padding-bottom: 10px;
   margin-bottom: 30px;
 }
+
 @media only screen and (max-width: 800px) {
   .pic {
     font-size: 0.9rem;
@@ -108,15 +110,8 @@ footer>p {
     font-size: 2.5rem;
   }
 
-  .head {
-    font-size: 1.1rem;
-  }
 
-  .pSpace {
-  font-size: 1rem;
-
-  }
-
+  
   .pic img {
     width: 45%;
   }
