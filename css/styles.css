@@ -213,6 +213,7 @@ footer {
 
 ul.para {
   list-style-type: none;
+  padding-right: 30px;
 /* list-style-image: linear-gradient(to left bottom, green, yellow);
   list-style-position: outside;*/
 }
