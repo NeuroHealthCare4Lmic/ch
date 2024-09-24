@@ -300,6 +300,8 @@ main #aboutUs {
 
   footer {
     font-size: 1.2rem;
+    position: fixed;
+
   }
 
   .contact-links a {
@@ -310,6 +312,13 @@ main #aboutUs {
     .topnav ul li.active .dropdown-content {
         display: block;
       }
+
+
+      .contact-links {
+      padding-bottom: 5px;
+
+      }
+
 
 }
 
