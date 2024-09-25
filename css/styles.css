@@ -222,6 +222,39 @@ ul.para {
   left: 30px;
 }
 
+
+
+/* Scrolling Banner Styles */
+      .scrolling-banner {
+          background:linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C); /* Golden Gradient */
+          color: white;
+          padding: 10px 0;
+          font-family: "Giga Sans", 'Raleway';
+          font-size: 1.2em;
+          font-weight: bold;
+          overflow: hidden;
+          position: relative;
+          z-index: -1;
+          white-space: nowrap;  /* Ensures text doesn't wrap */
+      }
+
+      .scrolling-banner p {
+          display: inline-block;
+          position: relative;
+          animation: scroll-text 20s linear infinite; /* 10s for smoother scrolling */
+      }
+
+      @keyframes scroll-text {
+          0% {
+              transform: translateX(100%); /* Start just off the right edge */
+          }
+          100% {
+              transform: translateX(-100%); /* End just off the left edge */
+          }
+      }
+
+
+
 @media only screen and (max-width: 800px) {
 
   /*@media screen and (max-width: 600px) {*/
