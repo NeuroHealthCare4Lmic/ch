@@ -12,6 +12,8 @@
   <head>
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="./css/events.css">
+    <link rel="stylesheet" href="./css/slide.css">
+
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -35,35 +37,42 @@
 
         <li class="dropdown"><a href="javascript:void(0);">Events</a>
           <ul class="dropdown-content">
-          <li><a href="./programs.html">Programs</a></li>
-        <li><a href="./events.html">Announcements</a></li>
+            <li><a href="./programs.html">Programs</a></li>
+            <li><a href="./events.html">Announcements</a></li>
 
-        </ul>
+          </ul>
         </li>
 
-        <li class="dropdown"><a href="javascript:void(0);">Chapters</a>
+        <li class="dropdown">
+            <a href="javascript:void(0);">Chapters</a>
+            <ul class="dropdown-content">
+                <!-- Africa with nested sub-menu -->
+                <li class="dropdown">
+                    <a href="javascript:void(0);">Africa</a>
+                    <ul class="dropdown-content dropdown-right">
+
+                        <li><a href="./african.html">Regional</a></li>
+                        <li><a href="./etho.html">Ethiopia</a></li>
+                    </ul>
+                </li>
+                <li><a href="./lebanon.html">Lebanon</a></li>
+                <li><a href="./saarc.html">SAARC</a></li>
+                <li><a href="./europe.html">Europe</a></li>
+                <li><a href="./us&ksa.html">KSA | UAE | Iraq</a></li>
+                <li><a href="./seasia.html">South East Asia</a></li>
+            </ul>
+        </li>
+
+
+
+        <li class="dropdown"><a href="javascript:void(0);">Structure</a>
           <ul class="dropdown-content">
-        <li><a href="./african.html">Africa</a></li>
-        <li><a href="./lebanon.html">Lebanon</a></li>
-        <li><a href="./saarc.html">SAARC</a></li>
-        <li><a href="./europe.html">Europe</a></li>
-        <li><a href="./us&ksa.html">KSA | UAE | Iraq</a></li>
-        <li><a href="./seasia.html">South East Asia</a></li>
+            <li><a href="./mShip.html">Membership</a></li>
+            <li><a href="./donate.html">Donate</a></li>
 
-
-        </ul>
+          </ul>
         </li>
-
-
-      <li class="dropdown"><a href="javascript:void(0);">Structure</a>
-          <ul class="dropdown-content">
-        <li><a href="./mShip.html">Membership</a></li>
-        <li><a href="./donate.html">Donate</a></li>
-
-      </ul>
-        </li>
-        <li><a href="index.html#contact-us">Contact</a></li>
-
+        <li><a href="#contact-us">Contact</a></li>
 
         <li><a href="#">🇫🇷⌄</a></li>
       </ul>
@@ -74,27 +83,42 @@
 
   <section class="head">
     <h2>African Chapter</h2>
-    <h3 class="heading">Events and Highlights</h3>
-  </section>
+    <!-- <h3 class="heading">Events and Highlights</h3> -->
 
-  <section class="pic-contain">
+  <div class="slider-container1" id="slider1">
+      <img class="slider-img" id="one" src="" alt="Image Slider">  <!-- Initial image -->
+      <!-- <button class="prev" onclick="prev(0)">&#10094;</button>
+      <button class="next" onclick="next(0)">&#10095;</button> -->
+  </div>
+  <!-- Optional: Dots for navigation -->
+  <div class="dots" id="dots-container-1"></div>
+  <h3> Insights from Our First successful Cohort</h3>
 
-      <figure><img src="img/eth2.jpeg" alt="Case presentation series.">
-        <figcaption>Neurovascular Case Discussion Series with Ethopia & Addis Ababa University</figcaption>
-        </figure>
 
-        <figure><img src="img/eth.jpg" alt="Case presentation series.">
-          <figcaption>Neuro Health Care 4 LMIC in conjunction with Ethopia & Addis Ababa University</figcaption>
-          </figure>
+
+  <div class="slider-container" id="slider2">
+      <img class="slider-img" src="" alt="Image Slider">  <!-- Initial image -->
+      <button class="prev" onclick="prev(1)">&#10094;</button>
+      <button class="next" onclick="next(1)">&#10095;</button>
+  </div>
+  <!-- Optional: Dots for navigation -->
+  <div class="dots" id="dots-container-2"></div>
+  <h3> Highlights of the First cohort</h3>
+
 </section>
 
-<section class="review small">
+
+
+
+<!-- <section class="review small">
+
+
 <h2> Insights from Our First successful Cohort</h2>
 <img src="img/4.png" alt="review.">
 <img src="img/1.png" alt="review.">
 <img src="img/2.png" alt="review.">
 <img src="img/3.png" alt="review.">
-</section>
+</section> -->
 
 
   <section class="pic-contain">
@@ -161,6 +185,7 @@
   </footer>
 
   <script src="./jscript/main.js"></script>
+  <script src="./jscript/script.js"></script>
 
 </body>
 

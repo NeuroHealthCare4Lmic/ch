@@ -26,10 +26,9 @@ body {
   background-color: lightyellow;
   color: var(--main-gblack);
   min-height: 100vh;
-  /* Ensure the body takes at least the full height of the viewport */
 }
 
-/* Header styles   */
+/* Header styles */
 header {
   background-image: var(--main-greenshade);
   transition: transform 0.3s ease-out;
@@ -49,7 +48,6 @@ header li:nth-child(6) {
 
 header img {
   height: 6rem;
-  /* Adjust the height as needed */
   margin-left: 20px;
   margin-bottom: -7px;
 }
@@ -64,38 +62,9 @@ header img {
   display: flex;
 }
 
-.topnav ul li .dropdown-content li {
-  float: none;
-}
-
-.topnav ul li .dropdown-content li a {
-  padding: 10px 0px 10px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-.topnav ul li .dropdown-content {
-  display: none;
-  position: absolute;
-  min-width: 140px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  background: var(--main-greenshade);
-  opacity: 0.8;
-}
-
-.topnav ul li:hover .dropdown-content {
-  display: block;
-
-}
-
-.topnav ul li .dropdown-content li {
-  float: none;
-}
-
-
-
 .topnav ul li {
   margin-right: 20px;
+  position: relative;
 }
 
 .topnav a {
@@ -107,6 +76,50 @@ header img {
   color: var(--main-gblack);
 }
 
+/* Dropdown content */
+.topnav ul li .dropdown-content {
+  display: none;
+  position: absolute;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  background: var(--main-greenshade);
+  opacity: 0.8;
+  top: 100%;
+  padding: 10px 0; /* Added padding for spacing */
+  min-width: 213px;
+  text-align: left;
+
+}
+
+.topnav ul li .dropdown-content li {
+
+  padding: 5px 18px 5px 21px; /* Added padding to individual list items */
+  margin: 5px 0; /* Added margin to create space between items */
+
+}
+
+
+
+
+.topnav ul li:hover .dropdown-content {
+  display: block;
+}
+
+/* Submenu to the right (like Africa's submenu) */
+.topnav ul li .dropdown-right {
+  display: none;
+  position: absolute;
+  left: 100%;
+
+  top: -15px;
+  background: var(--main-greenshade);
+  opacity: 0.8;
+}
+
+.topnav ul li .dropdown:hover .dropdown-right {
+  display: block;
+}
+
+/* Responsive hamburger icon */
 .icon {
   display: none;
   cursor: pointer;
@@ -141,7 +154,7 @@ main {
 section.aboutUs h2.aboutHead {
   padding-top: 30px;
   text-align: center;
-  }
+}
 
 .pSpace {
   line-height: 2;
@@ -174,7 +187,6 @@ footer {
   padding: 10px 0;
   width: 100%;
   bottom: 0;
-
 }
 
 .last {
@@ -192,7 +204,6 @@ footer {
   padding-bottom: 100px;
   flex-wrap: wrap;
   text-shadow: none;
-
 }
 
 .contact-details {
@@ -214,8 +225,6 @@ footer {
 ul.para {
   list-style-type: none;
   padding-right: 30px;
-/* list-style-image: linear-gradient(to left bottom, green, yellow);
-  list-style-position: outside;*/
 }
 
 .par {
@@ -223,96 +232,71 @@ ul.para {
   left: 30px;
 }
 
-
-
 /* Scrolling Banner Styles */
-      .scrolling-banner {
-          background:linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C); /* Golden Gradient */
-          color: white;
-          padding: 10px 0;
-          font-family: "Giga Sans", 'Raleway';
-          font-size: 1.2em;
-          font-weight: bold;
-          overflow: hidden;
-          position: relative;
-          z-index: -1;
-          white-space: nowrap;  /* Ensures text doesn't wrap */
-      }
+.scrolling-banner {
+  background: linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
+  color: white;
+  padding: 10px 0;
+  font-family: "Giga Sans", 'Raleway';
+  font-size: 1.2em;
+  font-weight: bold;
+  overflow: hidden;
+  position: relative;
+  z-index: -1;
+  white-space: nowrap;
+}
 
-      .scrolling-banner p {
-          display: inline-block;
-          position: relative;
-          animation: scroll-text 20s linear infinite; /* 10s for smoother scrolling */
-      }
+.scrolling-banner p {
+  display: inline-block;
+  position: relative;
+  animation: scroll-text 20s linear infinite;
+}
 
-      @keyframes scroll-text {
-          0% {
-              transform: translateX(100%); /* Start just off the right edge */
-          }
-          100% {
-              transform: translateX(-100%); /* End just off the left edge */
-          }
-      }
+@keyframes scroll-text {
+  0% {
+    transform: translateX(100%);
+  }
 
+  100% {
+    transform: translateX(-100%);
+  }
+}
 
-
+/* Mobile Styles */
 @media only screen and (max-width: 800px) {
 
-  /*@media screen and (max-width: 600px) {*/
   .topnav ul {
     font-family: "Giga Sans", 'Raleway', Monolith, Gilroy, Poppins, sans-serif;
     display: none;
-    /* Hide the navigation links by default on smaller screens */
     flex-direction: column;
     background-image: var(--main-greenshade);
     color: var(--main-white);
     position: absolute;
     top: 81px;
-    /* Adjust as needed */
     left: 0;
     width: 100%;
     z-index: 1;
-    /* Ensure the menu is above other content */
-    margin: auto;
   }
 
-  .topnav ul li .dropdown-content {
-      position: relative;
-      top: 10px;
-      width: 100%;
-    }
+  header img {
+    height: 5rem;
+  }
 
-.topnav ul li .dropdown-content li a{
-  text-align: center;
-}
-
-header img {
-  height: 5rem;
-  /* Adjust the height as needed */
-
-}
   .icon {
     display: block;
-    /* Display the hamburger menu icon */
   }
 
   .topnav.active ul {
     display: flex;
-    /* Show the navigation links when active */
-    /*flex-direction: column;
-    align-items: center;*/
-    /* Center the menu items vertically */
   }
-
 
   .topnav ul li {
     margin-right: 0;
-    padding: 10px 0 10px 0;
+    padding: 10px 0;
     text-align: center;
     width: 100%;
     font-size: 1rem;
-    /*position: relative;*/
-    /* Ensure menu items take full width */
+
   }
 
   .topnav ul li:hover {
@@ -320,40 +304,41 @@ header img {
     border-top-color: var(--main-white);
   }
 
+  .topnav ul li .dropdown-content .dropdown-right {
+    position: relative;
+    top: 0; /* Adjusted to show directly below the parent */
+    left: -25px; /* Align with the parent */
 
+  }
+
+  /* Show dropdown to the bottom in mobile */
+  .topnav ul li .dropdown.active .dropdown-content {
+    display: block; /* Show the dropdown content */
+    position: relative; /* Ensure it displays below */
+    top: 100%; /* Position it below the parent item */
+  }
   .contact-us {
     font-size: 0.9rem;
   }
 
 
-main #aboutUs {
-
-  padding: 5px;
-}
-
+  main #aboutUs {
+    padding: 5px;
+  }
 
   footer {
     font-size: 1.2rem;
     position: fixed;
-
   }
 
   .contact-links a {
     font-size: 1.1rem;
     width: 1%;
-    }
+  }
 
-    .topnav ul li.active .dropdown-content {
-        display: block;
-      }
-
-
-      .contact-links {
-      padding-bottom: 5px;
-
-      }
-
-
+  .contact-links {
+    padding-bottom: 5px;
+  }
 }
 
 @media only screen and (max-width: 920px) {
@@ -361,13 +346,12 @@ main #aboutUs {
     font-size: 1.1rem;
   }
 
-
-
   .aboutUs h2 {
     font-size: 2rem;
   }
 
-body{
-  text-align: justify;
-  hyphens: auto;}
+  body {
+    text-align: justify;
+    hyphens: auto;
+  }
 }
