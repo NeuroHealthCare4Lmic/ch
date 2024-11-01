@@ -1,68 +1,96 @@
-.slider-container {
-           width: 100%;
-           max-width: 50rem;
-           position: relative;
-           margin: 1% auto;
-           overflow: hidden;
-           height: 45rem; /* Fixed height for slider */
-       }
+.slider-container3 {
+  width: 100%;
+  max-width: 33rem;
+  position: relative;
+  margin: 1% auto;
+  overflow: hidden;
+  height: 45rem;
+  object-fit: contain;
 
-       .slider-container1 {
-                  width: 100%;
-                  max-width: 35rem;
-                  position: relative;
-                  margin: 1% auto;
-                  overflow: hidden;
-                  height:45rem; /* Fixed height for slider */
-              }
-
-
-       #one{
-           object-fit: contain;
-       }
-
-
-       .slider-img {
-           width: 100%;
-           height: 100%;
-           object-fit: cover;
-       }
-
-       .prev, .next {
-           position: absolute;
-           top: 50%;
-           transform: translateY(-50%);
-           background-color: transparent;
-           color: white;
-           border: none;
-           padding: 0px;
-           cursor: pointer;
-           font-size: 2rem;
-           border-radius: 3px;
-           font-weight: 10;
-       }
-
-
-  .prev:hover, .next:hover {
-    background-color: rgba(0, 0, 0, 0.1); /* Optional: Add a subtle background color on hover */
-    color: white; /* Optional: Change arrow color on hover */
+  /* Fixed height for slider */
 }
-       .prev { left: 1rem; }
-       .next { right: 1rem; }
 
-       .dots {
-           text-align: center;
-           margin-top: 10px;
-       }
-       .dot {
-           height: 15px;
-           width: 15px;
-           margin: 0 5px;
-           background-color: #bbb;
-           border-radius: 50%;
-           display: inline-block;
-           cursor: pointer;
-       }
-       .active {
-           background-color: #717171;
-       }
+.slider-container2 {
+  width: 100%;
+  max-width: 50rem;
+  position: relative;
+  margin: 1% auto;
+  overflow: hidden;
+  height: 45rem;
+  /* Fixed height for slider */
+}
+
+.slider-container1 {
+  width: 100%;
+  max-width: 45rem;
+  position: relative;
+  margin: 1% auto;
+  overflow: hidden;
+  height: 45rem;
+  /* Fixed height for slider */
+}
+
+#second {
+  object-fit: contain;
+}
+
+.slider-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  color: white;
+  border: none;
+  padding: 15px;
+  cursor: pointer;
+  font-size: 2rem;
+  border-radius: 50%;
+  font-weight: 10;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  /* Optional: Add a subtle background color on hover */
+  color: white;
+  /* Optional: Change arrow color on hover */
+}
+
+.prev {
+  left: 1rem;
+}
+
+.next {
+  right: 1rem;
+}
+
+.dots {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.active {
+  background-color: #717171;
+}
+#dots-container-3{
+  display: none;
+}
+.space {
+  margin-top:  10rem;
+  margin-bottom: 10rem;
+}

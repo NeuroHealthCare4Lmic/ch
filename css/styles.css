@@ -85,7 +85,7 @@ header img {
   opacity: 0.8;
   top: 100%;
   padding: 10px 0; /* Added padding for spacing */
-  min-width: 213px;
+  min-width: 175px;
   text-align: left;
 
 }
@@ -328,7 +328,7 @@ ul.para {
 
   footer {
     font-size: 1.2rem;
-    position: fixed;
+    position: relative;
   }
 
   .contact-links a {

@@ -1,6 +1,9 @@
 const sliders = [
-    { images: ['img/1.png', 'img/2.png', 'img/3.png', 'img/4.png', 'img/5.png', 'img/6.png', 'img/7.png', 'img/8.png', 'img/9.png','img/10.png', 'img/11.png','img/12.png'], currentIndex: 0 },
-    { images: ["img/coh1.png", "img/coh2.png", "img/coh3.png","img/coh4.png","img/coh5.png","img/coh6.png","img/coh7.png","img/coh8.png","img/coh9.png"], currentIndex: 0 },
+
+    { images: ['img/2coh/1a.jpeg','img/2coh/1.jpeg', 'img/2coh/2.jpeg', 'img/2coh/3.jpeg', 'img/2coh/4.jpeg', 'img/2coh/5.jpeg', 'img/2coh/6.jpeg', 'img/2coh/7.jpeg', 'img/2coh/8.jpeg', 'img/2coh/9.jpeg','img/2coh/10.jpeg', 'img/2coh/11.jpeg','img/2coh/12.jpeg', 'img/2coh/13.jpeg','img/2coh/14.jpeg','img/2coh/15.jpeg','img/2coh/16.jpeg','img/2coh/17.jpeg','img/2coh/18.jpeg','img/2coh/19.jpeg'], currentIndex: 0 },
+    { images: ['img/1coh/1.png', 'img/1coh/2.png', 'img/1coh/3.png', 'img/1coh/4.png', 'img/1coh/5.png', 'img/1coh/6.png', 'img/1coh/7.png', 'img/1coh/8.png', 'img/1coh/9.png','img/1coh/10.png', 'img/1coh/11.png','img/1coh/12.png'], currentIndex: 0 },
+    { images: ["img/coh1.png", "img/coh2.png", "img/coh3.png","img/coh4.png","img/coh5.png","img/coh6.png","img/coh7.png","img/coh8.png","img/coh9.png"], currentIndex: 0 }
+
 
 ];
 
@@ -56,4 +59,5 @@ function goToSlide(sliderIndex, imageIndex) {
 
 // Optional: Automatic sliding (uncomment to enable auto sliding for each slider)
 setInterval(() => next(0), 3000); // Auto slide for first slider every 3 seconds
-setInterval(() => next(1), 3000); // Auto slide for second slider every 3 seconds
+setInterval(() => next(1), 6000); // Auto slide for second slider every 3 seconds
+setInterval(() => next(2), 5000); // Auto slide for second slider every 3 seconds
