@@ -6,6 +6,7 @@
   overflow: hidden;
   height: 45rem;
   object-fit: contain;
+  border: none;
 
   /* Fixed height for slider */
 }
@@ -120,5 +121,8 @@ h2.spaceH {
     height: auto;
   }
 
+h2.spaceH{
+  font-size: 1.5rem;
+}
 
 }
