@@ -12,6 +12,8 @@
   <head>
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="./css/events.css">
+    <link rel="stylesheet" href="./css/slide.css">
+
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -80,13 +82,23 @@
 
   <section class="head">
     <h2>Lebanon Chapter</h2>
-    <h3 class="heading">Events and Hightlights</h3>
-  </section>
+</section>
 
+    <section class="pic-contain">
 
-  <section class="review">
-    <h2> Our Members of the Labense Chapter</h2>
-      <figure><img src="img/leb/AT.jpg" alt="Meeting with Lebanese representatives">
+    <h2 class="spaceH"> Our Members of the Labense Chapter</h2>
+
+    <div class="slider-containerLEB" id="slider1">
+      <img class="slider-img" src="" alt="Image Slider"> <!-- Initial image -->
+      <button class="prev" onclick="prev(0)">&#10094;</button>
+      <button class="next" onclick="next(0)">&#10095;</button>
+    </div>
+    <div class="dots" id="dots-container-1"></div>
+
+    <!-- <section class="review">
+      <h2> Our Members of the Labense Chapter</h2> -->
+
+      <!-- <figure><img src="img/leb/AT.jpg" alt="Meeting with Lebanese representatives">
       </figure>
 
       <figure><img src="img/leb/BS.jpg" alt="Meeting with Lebanese representatives">
@@ -112,11 +124,10 @@
 
       <figure><img src="img/leb/TT.jpg" alt="Meeting with Lebanese representatives">
 
-      </figure>
-    </section>
+      </figure> -->
 
-  <section class="pic-contain">
-<h2> Our weekly meeting</h2>
+
+<h2 class="spaceH"> Our weekly meeting</h2>
     <figure><img src="img/leb1.jpg" alt="Meeting with Lebanese representatives">
       <figcaption>Weekly meeting with Lebanese representatives</figcaption>
     </figure>
@@ -133,6 +144,7 @@
   </footer>
 
   <script src="./jscript/main.js"></script>
+  <script src="./jscript/script2.js"></script>
 
 </body>
 
