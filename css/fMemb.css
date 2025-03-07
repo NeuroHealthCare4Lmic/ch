@@ -14,7 +14,7 @@ body {
   margin: 0;
   padding: 0;
   letter-spacing: .2rem;
-  background-color: var(--main-lyellow);
+  background-color: #FFFFF7;
 }
 
 a {
@@ -42,7 +42,7 @@ a {
   color: #353935;
 }
 
-.pic < img {
+.pic img {
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -77,7 +77,7 @@ footer>p {
 }
 
 .pic img {
-  border-radius: 100px;
+  border-radius: 50%;
   width: 35%;
 }
 

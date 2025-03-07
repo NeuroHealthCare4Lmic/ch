@@ -1,129 +1,77 @@
-.slider-containerLEB {
-  width: 100%;
-  max-width: 45rem;
-  position: relative;
-  margin: 0 auto;
-  overflow: hidden;
-  height: 45rem;
-  object-fit: contain;
-  border:  none;
 
-  /* Fixed height for slider */
+.head h2 {
+    color: #333;
+    margin-bottom: 15px;
 }
 
-
-.slider-container3 {
-  width: 100%;
-  max-width: 33rem;
-  position: relative;
-  margin: 1% auto;
-  overflow: hidden;
-  height: 45rem;
-  object-fit: contain;
-
-  /* Fixed height for slider */
+/* Slider Container */
+.slider-container {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+    background: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow:  0 4px 8px rgba(0, 0, 0, 0.2);
+  
+    
 }
 
-.slider-container2 {
-  width: 100%;
-  max-width: 50rem;
-  position: relative;
-  margin: 1% auto;
-  overflow: hidden;
-  height: 45rem;
-  /* Fixed height for slider */
-}
-
-.slider-container1 {
-  width: 100%;
-  max-width: 45rem;
-  position: relative;
-  margin: 1% auto;
-  overflow: hidden;
-  height: 45rem;
-  /* Fixed height for slider */
-}
-
-#second {
-  object-fit: contain;
-}
-
+/* Slider Images */
 .slider-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+    width: 100%;
+    height: 700px;
+    display: block;
+    object-fit: contain;  
+    border-radius: 10px;
+  
 }
 
+/* Navigation Buttons */
 .prev, .next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: transparent;
-  color: white;
-  border: none;
-  padding: 15px;
-  cursor: pointer;
-  font-size: 2rem;
-  border-radius: 50%;
-  font-weight: 10;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 5px;
 }
 
 .prev:hover, .next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
-  /* Optional: Add a subtle background color on hover */
-  color: white;
-  /* Optional: Change arrow color on hover */
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
 .prev {
-  left: 1rem;
+    left: 10px;
 }
 
 .next {
-  right: 1rem;
+    right: 10px;
 }
 
+/* Dots Navigation */
 .dots {
-  text-align: center;
-  margin-top: 10px;
+    text-align: center;
+    margin-top: 10px;
 }
 
 .dot {
-  height: 15px;
-  width: 15px;
-  margin: 0 5px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  cursor: pointer;
+    height: 12px;
+    width: 12px;
+    margin: 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-.active {
-  background-color: #717171;
-}
-#dots-container-3{
-  display: none;
-}
-.space {
-  margin-top:  10rem;
-  margin-bottom: 10rem;
-}
-
-h2.spaceH {
-  margin-bottom: 5rem;
-  font-size: 2.5rem;
-}
-
-
-@media only screen and (max-width: 800px) {
-  .slider-containerLEB {
-    width: 80%;
-    height: auto;
-  }
-
-h2.spaceH{
-  font-size: 1.5rem;
-  margin: 5px;
-}
-
+.dot.active {
+    background-color: #333;
 }

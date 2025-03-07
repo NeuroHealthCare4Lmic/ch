@@ -13,7 +13,7 @@ body {
   margin: 0;
   padding: 0;
   letter-spacing: .2rem;
-  background-color: lightyellow;
+  background-color: #FFFFF7;
 }
 
 a {
@@ -35,6 +35,23 @@ a {
   line-height: 2.2;
   font-size: 3rem;
   text-align: center;
+}
+
+.head details > summary {
+  text-align: left;
+  padding: 1% 1% 1% 3%;
+}
+
+details p{
+  padding-left: 6%;
+}
+details ul{
+  padding-left: 6%;
+}
+
+details .para{
+  padding: 1% 1% 1% 6%;
+  
 }
 
 footer {
