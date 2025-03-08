@@ -1,60 +1,86 @@
-const sliders = [
+const slidersData = [
 
     { images: ['img/leb/odette.png', 'img/leb/reem.png', 'img/leb/AT.jpg','img/leb/BS.jpg', 'img/leb/CA.jpg', 'img/leb/CS.jpg', 'img/leb/JEK.jpg', 'img/leb/LH.jpg', 'img/leb/LS.jpg', 'img/leb/MH.jpg', 'img/leb/TT.jpg','img/leb/JW.jpg' ], currentIndex: 0 },
 
 ];
 
-// Create dots and set up each slider
-sliders.forEach((slider, index) => {
-    createDots(index, slider.images.length);
-    updateImage(index);
-});
 
-// Function to create dots dynamically based on the number of images
-function createDots(sliderIndex, imageCount) {
-    const dotsContainer = document.getElementById(`dots-container-${sliderIndex + 1}`);
-    for (let i = 0; i < imageCount; i++) {
-        let dot = document.createElement('span');
-        dot.classList.add('dot');
-        dot.setAttribute('data-index', i);
-        dot.onclick = function () {
-            goToSlide(sliderIndex, i);
-        };
+function createSlider(sliderIndex) {
+    const sliderContainer = document.querySelector(`[data-slider="${sliderIndex}"]`);
+    if (!sliderContainer) return;
+
+    // Create slider elements
+    sliderContainer.innerHTML = `
+                <img class="slider-img" src="${slidersData[sliderIndex].images[0]}" alt="Image Slider">
+                <button class="prev">&#10094;</button>
+                <button class="next">&#10095;</button>
+                <div class="dots"></div>
+            `;
+
+    // Add event listeners
+    const prevBtn = sliderContainer.querySelector(".prev");
+    const nextBtn = sliderContainer.querySelector(".next");
+    const imgElement = sliderContainer.querySelector(".slider-img");
+    const dotsContainer = sliderContainer.querySelector(".dots");
+
+    prevBtn.addEventListener("click", () => changeSlide(sliderIndex, -1));
+    nextBtn.addEventListener("click", () => changeSlide(sliderIndex, 1));
+
+    // Create dots dynamically
+    slidersData[sliderIndex].images.forEach((_, i) => {
+        let dot = document.createElement("span");
+        dot.classList.add("dot");
+        dot.addEventListener("click", () => goToSlide(sliderIndex, i));
         dotsContainer.appendChild(dot);
-    }
+    });
+
+    updateSlider(sliderIndex);
 }
 
-// Update the image and active dot for a specific slider
-function updateImage(sliderIndex) {
-    const sliderImg = document.querySelector(`#slider${sliderIndex + 1} .slider-img`);
-    const dots = document.querySelectorAll(`#dots-container-${sliderIndex + 1} .dot`);
+function updateSlider(sliderIndex) {
+    const sliderContainer = document.querySelector(`[data-slider="${sliderIndex}"]`);
+    const imgElement = sliderContainer.querySelector(".slider-img");
+    const dots = sliderContainer.querySelectorAll(".dot");
 
-    sliderImg.src = sliders[sliderIndex].images[sliders[sliderIndex].currentIndex];
+    imgElement.src = slidersData[sliderIndex].images[slidersData[sliderIndex].currentIndex];
+    dots.forEach((dot, i) => dot.classList.toggle("active", i === slidersData[sliderIndex].currentIndex));
+}
 
-    // Update active class for dots
-    dots.forEach((dot, index) => {
-        dot.classList.toggle('active', index === sliders[sliderIndex].currentIndex);
+function changeSlide(sliderIndex, step) {
+    const slider = slidersData[sliderIndex];
+    slider.currentIndex = (slider.currentIndex + step + slider.images.length) % slider.images.length;
+    updateSlider(sliderIndex);
+}
+
+function goToSlide(sliderIndex, imageIndex) {
+    slidersData[sliderIndex].currentIndex = imageIndex;
+    updateSlider(sliderIndex);
+}
+
+// Initialize sliders dynamically
+slidersData.forEach((_, index) => createSlider(index));
+
+const autoSlideSliders = [0, 2, 3, 4]; // Specify which sliders should auto-slide (0 = first slider, 2 = third slider)
+
+function startAutoSlide(sliderIndex, intervalTime = 3000) {
+    if (!autoSlideSliders.includes(sliderIndex)) return; // Only start auto-slide for selected sliders
+
+    let sliderContainer = document.querySelector(`[data-slider="${sliderIndex}"]`);
+    let interval = setInterval(() => changeSlide(sliderIndex, 1), intervalTime);
+
+    // Pause when hovered
+    sliderContainer.addEventListener("mouseenter", () => clearInterval(interval));
+
+    // Resume when mouse leaves
+    sliderContainer.addEventListener("mouseleave", () => {
+        interval = setInterval(() => changeSlide(sliderIndex, 1), intervalTime);
     });
 }
 
-// Functions to move to the next or previous image
-function prev(sliderIndex) {
-    sliders[sliderIndex].currentIndex = (sliders[sliderIndex].currentIndex <= 0) ? sliders[sliderIndex].images.length - 1 : sliders[sliderIndex].currentIndex - 1;
-    updateImage(sliderIndex);
-}
-
-function next(sliderIndex) {
-    sliders[sliderIndex].currentIndex = (sliders[sliderIndex].currentIndex >= sliders[sliderIndex].images.length - 1) ? 0 : sliders[sliderIndex].currentIndex + 1;
-    updateImage(sliderIndex);
-}
-
-// Jump to a specific slide when a dot is clicked
-function goToSlide(sliderIndex, imageIndex) {
-    sliders[sliderIndex].currentIndex = imageIndex;
-    updateImage(sliderIndex);
-}
-
-// Optional: Automatic sliding (uncomment to enable auto sliding for each slider)
-setInterval(() => next(0), 3000); // Auto slide for first slider every 3 seconds
-setInterval(() => next(1), 6000); // Auto slide for second slider every 3 seconds
-setInterval(() => next(2), 5000); // Auto slide for second slider every 3 seconds
+// Initialize sliders dynamically & start auto-slide only for selected ones
+document.addEventListener("DOMContentLoaded", function () {
+    slidersData.forEach((_, index) => {
+        createSlider(index);
+        startAutoSlide(index, 4000); // Auto-slide only for selected sliders
+    });
+});

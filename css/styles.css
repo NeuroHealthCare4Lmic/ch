@@ -435,7 +435,7 @@ nav ul li li .dropdown-right {
 }
 
 @media only screen and (max-width: 920px) {
-  .topnav ul li {x
+  .topnav ul li {
     font-size: 1.1rem;
   }
 
@@ -446,4 +446,10 @@ nav ul li li .dropdown-right {
     text-align: justify;
     hyphens: auto;
   }
+  
+  details > summary {
+    font-size: 2rem;
+  }
+  
+
 }
