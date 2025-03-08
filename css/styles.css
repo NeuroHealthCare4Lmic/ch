@@ -10,7 +10,7 @@
   --main-gblack: #353935;
   --main-rblack: #333;
   --main-mnblue: midnightblue;
-  --main-greenshade: linear-gradient(0deg, #AFE1AF -23.14%, #4CBB17 82.67%, #4CBB17 82.67%);
+  --main-greenshade: linear-gradient(to right, #074C00, #42A341, #B8E2A3);
 }
 
 /* Reset some default styles */
@@ -213,7 +213,7 @@ details > summary {
 
 /* Footer styles */
 footer {
-  background-image: linear-gradient(0deg, #AFE1AF -23.14%, #4CBB17 82.67%, #4CBB17 82.67%);
+  background-image: var(--main-greenshade);
   color: var(--main-whitcolor);
   text-align: center;
   padding: 10px 0;
@@ -273,18 +273,16 @@ ul.para {
   font-size: 1rem;
   font-weight: bold;
   overflow: hidden;
-  position: relative;
   z-index: -1;
   white-space: nowrap;
-}
+  }
 
 
 
 .scrolling-banner pre {
   display: inline-block;
-  position: relative;
   font-weight: 600;
-  animation: scroll-text 15s linear infinite;
+  animation: scroll-text 10s linear infinite;
   }
 
 .scrolling-banner pre:hover {
@@ -316,7 +314,7 @@ span.bannerEmo{
   font-size: 1.2em;
   font-weight: bold;
   overflow: hidden;
-  position: relative;
+  position: sticky;
   z-index: 1;
   white-space: nowrap;
 }
@@ -398,7 +396,8 @@ span.bannerEmo{
 nav ul li ul li{
   margin-top:  20px;/* Added margin to create space between items */
   padding: 0;
-  /*background-color: brown;*/
+background-image: linear-gradient(315deg, #63d471 0%, #233329 74%);
+
  }
 
 
@@ -412,7 +411,13 @@ nav ul li ul li{
   
   
 nav ul li li .dropdown-right li {
-  background-color: green;
+ 
+background-image: linear-gradient(to right, #040404, #000000, #656565);
+  
+  
+
+  
+
   }
 nav ul li li .dropdown-right {
   margin-top: 70px;
