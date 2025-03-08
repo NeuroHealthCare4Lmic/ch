@@ -10,7 +10,7 @@
   --main-gblack: #353935;
   --main-rblack: #333;
   --main-mnblue: midnightblue;
-  --main-greenshade: linear-gradient(to right, #074C00, #42A341, #B8E2A3);
+  --main-greenshade: linear-gradient(to left, #074C00, #42A341, #B8E2A3);
 }
 
 /* Reset some default styles */
