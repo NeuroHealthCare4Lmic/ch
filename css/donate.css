@@ -6,6 +6,7 @@
   --main-gray: #303841;
   --main-lgray: #f9f9f9;
   --main-dblue: #00004d;
+  --main-greenshade: linear-gradient(to right, #074C00, #42A341, #B8E2A3);
 }
 
 body {
@@ -49,7 +50,7 @@ color: orange;
 
 
 footer {
-  background-image: linear-gradient(0deg, #AFE1AF -23.14%, #4CBB17 82.67%, #4CBB17 82.67%);
+  background-image: var(--main-greenshade);
   color: #fff;
   font-family: "Giga Sans", 'Raleway', Monolith, Gilroy, Poppins, sans-serif;
   text-align: center;
