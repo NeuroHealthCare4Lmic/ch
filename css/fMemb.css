@@ -1,118 +1,65 @@
-/* Custom properties/variables  */
-:root {
-  --main-white: #f0f0f0;
-  --main-red: #be3144;
-  --main-blue: #45567d;
-  --main-gray: #303841;
-  --main-lgray: #f9f9f9;
-  --main-dblue: #00004d;
-  --main-lyellow: lightyellow;
+/* fMemb.css - Specific styles for Founding Members page.
+   This file relies on variables defined in styles.css.
+*/
+
+.member-card {
+  background: var(--bg-white);
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 4rem;
+  border: 1px solid rgba(0,0,0,0.05);
+  box-shadow: var(--shadow-sm);
 }
 
-body {
-  font-family: "Giga Sans", 'Raleway', Monolith, Gilroy, Poppins, sans-serif;
-  margin: 0;
-  padding: 0;
-  letter-spacing: .2rem;
-  background-color: #FFFFF7;
-}
-
-a {
-  color: #007bff;
-  text-decoration: none;
-}
-
-.head {
-  font-size: 1.3rem;
-  line-height: 2;
-  padding: 50px 20px;
-  letter-spacing: 0.1rem;
-  word-spacing: 0.5rem;
-}
-
-.head h2 {
-  text-shadow: 3px 3px 2px var(--main-white);
-  color: #353935;
-  line-height: 2.2;
-  font-size: 3rem;
+.member-header {
   text-align: center;
+  padding: 2rem;
+  background: linear-gradient(to bottom, var(--very-light-green), var(--bg-white));
 }
 
-.head h3 {
-  color: #353935;
-}
-
-.pic img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-footer {
-  background-image: var(--main-greenshade);
-  color: #fff;
-  font-family: "Giga Sans", 'Raleway', Monolith, Gilroy, Poppins, sans-serif;
-  text-align: center;
-  padding: 15px 0;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  margin: auto;
-}
-
-footer>p {
-  font-size: 0.9rem;
-}
-
-.pic {
-  padding: 20px 10px;
-  text-align: center;
-  line-height: 0.5;
-  font-size: 1.2rem;
-  letter-spacing: 0.1rem;
-}
-
-.pic h2 {
-  font-size: 2rem;
-}
-
-.pic img {
+.member-img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
   border-radius: 50%;
-  width: 35%;
+  border: 5px solid white;
+  box-shadow: var(--shadow-md);
+  margin-bottom: 1.5rem;
 }
 
-.last {
-  padding-top: 20px;
+.member-header h3 {
+  color: var(--dark-green);
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
 }
 
-.subT {
-  font-size: 0.8rem;
-  padding: 10px;
-  letter-spacing: normal;
-  word-spacing: 0.1rem;
+.member-role {
+  color: var(--primary-green);
+  font-weight: 600;
+  font-style: italic;
+  font-size: 1.1rem;
 }
 
-.pSpace {
-  padding-bottom: 10px;
-  margin-bottom: 30px;
+.member-bio {
+  padding: 0 2.5rem 2.5rem 2.5rem;
+  color: var(--text-light);
+  font-size: 1.05rem;
+  line-height: 1.8;
 }
 
-@media only screen and (max-width: 800px) {
-  .pic {
-    font-size: 0.9rem;
-  }
+.member-bio p { margin-bottom: 1.5rem; }
 
-  .pic h2 {
-    font-size: 2rem;
-  }
+.member-bio a { 
+  color: var(--primary-green); 
+  font-weight: 600; 
+  text-decoration: none; 
+}
 
-  .head h2 {
-    font-size: 2.5rem;
-  }
+.member-bio a:hover { text-decoration: underline; }
 
-
-  
-  .pic img {
-    width: 45%;
-  }
+/* Responsive Adjustments */
+@media (max-width: 920px) {
+  .member-bio { padding: 0 1.5rem 2rem 1.5rem; }
+  .member-img { width: 150px; height: 150px; }
 }

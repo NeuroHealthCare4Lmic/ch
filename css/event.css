@@ -1,49 +1,51 @@
-/* programs.css - Specific styles for the Programs/Updates page. 
+/* events.css - Specific styles for the Events page gallery. 
    Relies on variables defined in styles.css.
 */
 
 /* --- Gallery Layout --- */
 
-.program-gallery {
+.event-gallery {
   display: grid;
-  grid-template-columns: 1fr; /* Single item per row */
+  grid-template-columns: 1fr; /* Single item per row, as requested */
   gap: 2.5rem; 
   margin-top: 3rem;
   margin-bottom: 3rem;
+  padding-top: 2rem; 
 }
 
-.program-item {
+/* Styles for the individual figure/card */
+.event-gallery figure {
   background: var(--bg-white);
   border-radius: var(--radius-lg);
   overflow: hidden;
   box-shadow: var(--shadow-md);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   
-  /* 💡 FIX: Force the card to take 100% width up to 900px */
+  /* Make the card centered and wider for a prominent display */
   width: 100%; 
-  max-width: 900px; 
+  max-width: 900px; /* Limits the max width of the card */
   margin: 0 auto; 
   
-  /* Flexbox to manage internal height (keeps figcaption uniform) */
+  /* Core Fix: Use Flexbox to manage internal height (keeps figcaption uniform) */
   display: flex; 
   flex-direction: column;
   height: 100%; 
 }
 
-.program-item:hover {
+.event-gallery figure:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
-.program-item img {
-  width: 100%; /* Ensures image stretches to card width (900px) */
-  aspect-ratio: 16/9; 
+.event-gallery img {
+  width: 100%; 
+  aspect-ratio: 16/9; /* Use a fixed aspect ratio for the image */
   object-fit: contain;
   flex-shrink: 0; 
 }
 
-.program-item figcaption {
-  /* Ensures a uniform vertical size for the text area */
+.event-gallery figcaption {
+  /* Core Fix: Set a minimum height for the caption container */
   min-height: 80px; 
   
   padding: 1.25rem;
@@ -53,37 +55,24 @@
   color: var(--dark-green);
   background-color: var(--very-light-green);
   
+  /* Flexbox settings for the caption to vertically center the text */
   display: flex; 
   align-items: center; 
   justify-content: center;
 }
 
-/* --- PDF Section Styles --- */
-
+/* Reused utility styles from programs.css for consistency */
 .section-subtitle {
     font-family: 'Poppins', sans-serif;
     font-size: 1.8rem;
     color: var(--medium-green);
     text-align: center;
-    margin-top: 4rem;
+    margin-top: 2rem;
     margin-bottom: 1.5rem;
 }
 
-.pdfobject-container {
-  height: 600px; 
-  border: 4px solid var(--light-green);
-  border-radius: var(--radius-sm);
-  box-shadow: var(--shadow-sm);
-  max-width: 900px; 
-  margin: 0 auto;
-}
-
 @media (max-width: 600px) {
-    .pdfobject-container {
-        height: 400px;
-        max-width: 100%;
-    }
-    .program-item figcaption {
-        min-height: 60px;
+    .event-gallery figcaption {
+        min-height: 60px; /* Adjust min height for mobile */
     }
 }

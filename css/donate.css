@@ -1,84 +1,100 @@
-/* Custom properties/variables  */
-:root {
-  --main-white: #f0f0f0;
-  --main-red: #be3144;
-  --main-blue: #45567d;
-  --main-gray: #303841;
-  --main-lgray: #f9f9f9;
-  --main-dblue: #00004d;
-  --main-greenshade: linear-gradient(to right, #074C00, #42A341, #B8E2A3);
+/* donate.css - Specific styles for the Donation page.
+   Relies on variables defined in styles.css.
+*/
+
+.intro-text {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto 3rem auto;
+    font-size: 1.1rem;
 }
 
-body {
-  font-family: "Giga Sans", 'Raleway', Monolith, Gilroy, Poppins, sans-serif;
-  margin: 0;
-  padding: 0;
-  letter-spacing: .2rem;
-  background-color: #FFFFF7;
-}
-
-a {
-  color: #007bff;
-  text-decoration: none;
-}
-
-
-.head {
-  font-size: 1.3rem;
-  line-height: 2;
-  padding: 90px 20px;
-  letter-spacing: 0.1rem;
-  word-spacing: 0.5rem;
-}
-
-.head h1 {
-  text-shadow: 3px 3px 2px var(--main-white);
-  color: #353935;
-  line-height: 2.2;
-  font-size: 3rem;
+/* --- Donation Box Layout --- */
+.donation-box {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 3rem;
+  background-color: var(--very-light-green); /* Changed background for emphasis */
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--light-green);
   text-align: center;
 }
 
-.head h2 {
-color: orange;
+.bank-icon {
+    font-size: 3rem;
+    color: var(--primary-green);
+    margin-bottom: 1rem;
 }
 
-.head h3{
-  text-align: center;
-  padding-bottom: 50px;
-}
-
-
-footer {
-  background-image: var(--main-greenshade);
-  color: #fff;
-  font-family: "Giga Sans", 'Raleway', Monolith, Gilroy, Poppins, sans-serif;
-  text-align: center;
-  padding: 10px 0;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  margin: auto;
-}
-
-footer>p {
-  font-size: 0.9rem;
-}
-
-
-.last{
-      padding-top: 20px;
-}
-
-@media only screen and (max-width: 800px) {
-  .head {
-    font-size: 1rem;
-  }
-
-  .head h1 {
+.donation-heading {
+    font-family: 'Poppins', sans-serif;
     font-size: 2rem;
+    color: var(--dark-green);
+    margin-bottom: 2rem;
+}
+
+/* Grid for bank details */
+.bank-details-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two columns for label and value */
+  gap: 1.5rem 2rem;
+  padding: 1.5rem 0;
+  border-top: 2px solid var(--light-green);
+  border-bottom: 2px solid var(--light-green);
+  background-color: var(--bg-white); /* White background inside the box */
+  padding: 2rem;
+  border-radius: var(--radius-sm);
+}
+
+.detail-item {
+  display: flex;
+  flex-direction: column;
+  text-align: left; /* Align text within detail items */
+}
+
+.detail-item.full-width {
+  grid-column: 1 / -1; /* Makes the address span both columns */
+}
+
+.detail-label {
+  font-weight: 600;
+  color: var(--medium-green);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  margin-bottom: 0.25rem;
+}
+
+.detail-value {
+  font-family: 'Poppins', sans-serif; /* Changed from monospace for clean look */
+  font-size: 1.1rem;
+  color: var(--text-dark);
+  font-weight: 500;
+}
+
+.donation-contact {
+    text-align: center;
+    margin-top: 3rem;
+    font-size: 1rem;
+    color: var(--text-light);
+}
+
+.donation-contact .contact-link {
+    color: var(--primary-green);
+    font-weight: 600;
+    white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 600px) {
+  .donation-box {
+    padding: 2rem 1rem;
   }
-
-
-
+  .bank-details-grid {
+    grid-template-columns: 1fr; /* Stack details vertically on mobile */
+    gap: 1.5rem 0;
+  }
 }

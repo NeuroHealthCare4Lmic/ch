@@ -1,95 +1,158 @@
-/* Custom properties/variables  */
-:root {
-  --main-white: #f0f0f0;
-  --main-red: #be3144;
-  --main-blue: #45567d;
-  --main-gray: #303841;
-  --main-lgray: #f9f9f9;
-  --main-dblue: #00004d;
+/* mShip.css - Specific styles for the Membership page.
+   Relies on variables defined in styles.css.
+*/
+
+.membership-section {
+  padding: 3rem;
+  background-color: var(--bg-white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  margin-bottom: 3rem;
 }
 
-body {
-  font-family: "Giga Sans", 'Raleway', Monolith, Gilroy, Poppins, sans-serif;
-  margin: 0;
+.section-subtitle {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.8rem;
+    color: var(--dark-green);
+    margin-bottom: 1.5rem;
+    border-bottom: 3px solid var(--light-green);
+    padding-bottom: 0.5rem;
+    text-align: center;
+}
+
+.intro-text, .student-note {
+    text-align: center;
+    color: var(--text-light);
+    margin-bottom: 1.5rem;
+}
+
+.worldbank-link {
+    display: block;
+    width: fit-content;
+    margin: 0 auto 3rem auto;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--primary-green);
+    color: white;
+    font-weight: 600;
+    border-radius: var(--radius-sm);
+    transition: var(--transition);
+}
+.worldbank-link:hover {
+    background-color: var(--dark-green);
+    color: white;
+}
+.worldbank-link i {
+    margin-right: 0.5rem;
+}
+
+/* --- Pricing Cards --- */
+.pricing-cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.pricing-card {
+    background-color: var(--bg-light);
+    border: 1px solid var(--light-green);
+    border-radius: var(--radius-sm);
+    padding: 2rem;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.pricing-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.pricing-card h4 {
+    font-family: 'Poppins', sans-serif;
+    color: var(--dark-green);
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+.pricing-card .price {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--primary-green);
+    margin-bottom: 1rem;
+    line-height: 1;
+}
+
+.pricing-card .currency {
+    font-size: 1.5rem;
+    font-weight: 500;
+    vertical-align: top;
+    margin-right: 0.25rem;
+}
+
+.pricing-card .period {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-light);
+    display: block;
+}
+
+.primary-card {
+    border-color: var(--primary-green);
+    box-shadow: 0 0 0 3px var(--primary-green);
+}
+
+.student-note i {
+    color: var(--dark-green);
+    margin-right: 0.5rem;
+}
+
+/* --- Benefits List (Improved) --- */
+.benefits-section .section-subtitle {
+    margin-top: 2rem;
+}
+
+.benefit-list {
+  list-style: none;
   padding: 0;
-  letter-spacing: .2rem;
-  background-color: #FFFFF7;
 }
 
-a {
-  color: #007bff;
-  text-decoration: none;
+.benefit-item {
+  display: flex;
+  align-items: flex-start;
+  padding: 1rem 1.5rem;
+  border-radius: var(--radius-sm);
+  margin-bottom: 0.5rem;
+  box-shadow: var(--shadow-sm);
 }
 
-.head {
-  font-size: 1rem;
-  line-height: 2;
-  padding: 50px 10px;
-  letter-spacing: 0.1rem;
-  word-spacing: 0.5rem;
-  font-size: 1.3rem;
+.benefit-item:nth-child(odd) {
+  background-color: var(--very-light-green);
 }
 
-.head h1 {
-  text-shadow: 3px 3px 2px var(--main-white);
-  color: #353935;
-  line-height: 2.2;
-  font-size: 3rem;
-  text-align: center;
-}
-.head ul{
-  list-style-type: none;
-  text-align: left;
-  padding-left: 20px;
+.benefit-item:nth-child(even) {
+  background-color: var(--bg-white);
+  border: 1px solid var(--light-green);
 }
 
-.head h2 {
-color: orange;
+.benefit-item i {
+    color: var(--primary-green);
+    margin-right: 1rem;
+    font-size: 1.1rem;
+    line-height: 1.7; /* Matches paragraph line height */
+    flex-shrink: 0;
 }
 
-.mem {
-  padding-bottom: 50px;
+.benefit-item p {
+    margin: 0;
+    color: var(--text-dark);
 }
 
-.grey{
-  background-color:#FFFF8F;
-
-
-
-}
-footer {
-  background-image: var(--main-greenshade);
-  color: #fff;
-  font-family: "Giga Sans", 'Raleway', Monolith, Gilroy, Poppins, sans-serif;
-  text-align: center;
-  padding: 10px 0;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  margin: auto;
-}
-
-footer>p {
-  font-size: 0.9rem;
-}
-
-
-.last{
-      padding-top: 20px;
-}
-
-@media only screen and (max-width: 800px) {
-  .head {
-    font-size: 1.2rem;
-    padding-left: 2px;
+/* Mobile Adjustments */
+@media (max-width: 920px) {
+  .membership-section {
+    padding: 2rem;
   }
-
-  .head h1 {
-    font-size: 2rem;
-
-  }
-
-
-
-
 }

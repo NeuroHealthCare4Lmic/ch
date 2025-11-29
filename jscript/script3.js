@@ -1,6 +1,8 @@
+// ==================== IMAGE SLIDER LOGIC FOR AFRICA REGIONAL ====================
+
 const slidersData = [
+    // Slider 0: 2024 Highlights
     {
-        
         images: [
             "img/2coh/hl/1.png",
             "img/2coh/hl/2.png",
@@ -31,8 +33,10 @@ const slidersData = [
         ],
         currentIndex: 0
     },
-        
-     {   images: [
+
+    // Slider 1: Cohort 2 Highlights
+    {
+        images: [
             "img/2coh/coh2/coh2h.jpg",
             "img/2coh/coh2/coh2g.jpeg",
             "img/2coh/coh2/coh2f.jpeg",
@@ -45,6 +49,7 @@ const slidersData = [
         currentIndex: 0
     },
 
+    // Slider 2: Cohort 2 Announcements
     {
         images: [
             "img/2coh/1a.jpeg",
@@ -70,6 +75,8 @@ const slidersData = [
         ],
         currentIndex: 0
     },
+
+    // Slider 3: Cohort 2 Participants
     {
         images: [
             "img/1coh/1.png",
@@ -87,6 +94,8 @@ const slidersData = [
         ],
         currentIndex: 0
     },
+
+    // Slider 4: Comments from First Cohort
     {
         images: [
             "img/coh1.png",
@@ -101,6 +110,8 @@ const slidersData = [
         ],
         currentIndex: 0
     },
+
+    // Slider 5: Highlights of First Cohort
     {
         images: [
             "img/c1i.jpg",
@@ -114,85 +125,110 @@ const slidersData = [
             "img/c1a.jpg"
         ],
         currentIndex: 0
-    },
+    }
 ];
 
+// Sliders that should auto-slide (0 = first slider, 2 = third slider, etc.)
+const autoSlideSliders = [0, 2, 3, 4];
+
+/**
+ * Creates a slider UI for a given slider index
+ */
 function createSlider(sliderIndex) {
     const sliderContainer = document.querySelector(`[data-slider="${sliderIndex}"]`);
     if (!sliderContainer) return;
 
-    // Create slider elements
+    // Create slider HTML structure
     sliderContainer.innerHTML = `
-                <img class="slider-img" src="${slidersData[sliderIndex].images[0]}" alt="Image Slider">
-                <button class="prev">&#10094;</button>
-                <button class="next">&#10095;</button>
-                <div class="dots"></div>
-            `;
+        <img class="slider-img" src="${slidersData[sliderIndex].images[0]}" alt="Slider Image ${sliderIndex + 1}">
+        <button class="prev" aria-label="Previous image">&#10094;</button>
+        <button class="next" aria-label="Next image">&#10095;</button>
+        <div class="dots"></div>
+    `;
 
-    // Add event listeners
+    // Get slider elements
     const prevBtn = sliderContainer.querySelector(".prev");
     const nextBtn = sliderContainer.querySelector(".next");
-    const imgElement = sliderContainer.querySelector(".slider-img");
     const dotsContainer = sliderContainer.querySelector(".dots");
 
+    // Add navigation event listeners
     prevBtn.addEventListener("click", () => changeSlide(sliderIndex, -1));
     nextBtn.addEventListener("click", () => changeSlide(sliderIndex, 1));
 
-    // Create dots dynamically
+    // Create navigation dots
     slidersData[sliderIndex].images.forEach((_, i) => {
-        let dot = document.createElement("span");
+        const dot = document.createElement("span");
         dot.classList.add("dot");
+        if (i === 0) {
+            dot.classList.add("active-dot");
+        }
         dot.addEventListener("click", () => goToSlide(sliderIndex, i));
         dotsContainer.appendChild(dot);
     });
-
-    updateSlider(sliderIndex);
 }
 
+/**
+ * Updates the slider display and active dot
+ */
 function updateSlider(sliderIndex) {
+    const slider = slidersData[sliderIndex];
     const sliderContainer = document.querySelector(`[data-slider="${sliderIndex}"]`);
+    if (!sliderContainer) return;
+
     const imgElement = sliderContainer.querySelector(".slider-img");
     const dots = sliderContainer.querySelectorAll(".dot");
 
-    imgElement.src = slidersData[sliderIndex].images[slidersData[sliderIndex].currentIndex];
-    dots.forEach((dot, i) => dot.classList.toggle("active", i === slidersData[sliderIndex].currentIndex));
+    // Update image source
+    imgElement.src = slider.images[slider.currentIndex];
+
+    // Update active dot
+    dots.forEach((dot, i) => {
+        dot.classList.toggle("active-dot", i === slider.currentIndex);
+    });
 }
 
+/**
+ * Changes slide by a step amount (forward or backward)
+ */
 function changeSlide(sliderIndex, step) {
     const slider = slidersData[sliderIndex];
+    // Calculate new index with wrap-around
     slider.currentIndex = (slider.currentIndex + step + slider.images.length) % slider.images.length;
     updateSlider(sliderIndex);
 }
 
+/**
+ * Jumps to a specific slide
+ */
 function goToSlide(sliderIndex, imageIndex) {
     slidersData[sliderIndex].currentIndex = imageIndex;
     updateSlider(sliderIndex);
 }
 
-// Initialize sliders dynamically
-slidersData.forEach((_, index) => createSlider(index));
+/**
+ * Starts auto-sliding for selected sliders
+ */
+function startAutoSlide(sliderIndex, intervalTime = 4000) {
+    if (!autoSlideSliders.includes(sliderIndex)) return;
 
-const autoSlideSliders = [0, 2, 3, 4]; // Specify which sliders should auto-slide (0 = first slider, 2 = third slider)
+    const sliderContainer = document.querySelector(`[data-slider="${sliderIndex}"]`);
+    if (!sliderContainer) return;
 
-function startAutoSlide(sliderIndex, intervalTime = 3000) {
-    if (!autoSlideSliders.includes(sliderIndex)) return; // Only start auto-slide for selected sliders
-
-    let sliderContainer = document.querySelector(`[data-slider="${sliderIndex}"]`);
     let interval = setInterval(() => changeSlide(sliderIndex, 1), intervalTime);
 
-    // Pause when hovered
+    // Pause auto-slide on hover
     sliderContainer.addEventListener("mouseenter", () => clearInterval(interval));
 
-    // Resume when mouse leaves
+    // Resume auto-slide when mouse leaves
     sliderContainer.addEventListener("mouseleave", () => {
         interval = setInterval(() => changeSlide(sliderIndex, 1), intervalTime);
     });
 }
 
-// Initialize sliders dynamically & start auto-slide only for selected ones
-document.addEventListener("DOMContentLoaded", function () {
+// Initialize all sliders when DOM is ready
+document.addEventListener("DOMContentLoaded", function() {
     slidersData.forEach((_, index) => {
         createSlider(index);
-        startAutoSlide(index, 4000); // Auto-slide only for selected sliders
+        startAutoSlide(index, 4000);
     });
 });

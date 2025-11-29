@@ -1,0 +1,113 @@
+/* hierarchy.css - Specific styles for the Organizational Hierarchy page.
+   Relies on variables defined in styles.css.
+*/
+
+.intro-text {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 4rem auto;
+    font-size: 1.1rem;
+    color: var(--text-light);
+}
+
+/* --- Hierarchy Flow Chart Styling --- */
+
+.hierarchy-flow {
+    max-width: 700px;
+    margin: 0 auto;
+    position: relative;
+    padding-bottom: 3rem;
+}
+
+/* Vertical Line Connector (The 'spine' of the chart) */
+.hierarchy-flow::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 3px;
+    height: calc(100% - 8rem);
+    background-color: var(--light-green);
+    z-index: 1;
+}
+
+.hierarchy-level {
+    position: relative;
+    background-color: var(--bg-white);
+    padding: 1.5rem 2rem;
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow-md);
+    margin-bottom: 2.5rem;
+    z-index: 2;
+    text-align: center;
+}
+
+.hierarchy-level:hover {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+    transition: var(--transition);
+}
+
+/* The Icon/Circle on the Spine */
+.hierarchy-level::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: -1.25rem; /* Positioned just above the card */
+    transform: translateX(-50%);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--primary-green);
+    border: 5px solid var(--bg-light); /* Create a ring effect */
+    z-index: 3;
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    font-size: 1.2rem;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Mapping data-icon attribute to Font Awesome codes for a visually dynamic flow */
+.hierarchy-level[data-icon="fa-crown"]::after { content: "\f521"; background-color: var(--golden-rod); }
+.hierarchy-level[data-icon="fa-handshake"]::after { content: "\f2b5"; }
+.hierarchy-level[data-icon="fa-user-tie"]::after { content: "\f670";background-color: var(--corn-blue); }
+.hierarchy-level[data-icon="fa-users"]::after { content: "\f0c0"; }
+.hierarchy-level[data-icon="fa-hands-clapping"]::after { content: "\e4b5"; }
+.hierarchy-level[data-icon="fa-heart"]::after { content: "\f004"; background-color: #e74c3c; }
+
+
+.level-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    color: var(--dark-green);
+    margin-top: 1rem; /* Space below the hidden icon */
+    margin-bottom: 0.75rem;
+}
+
+.hierarchy-level p {
+    color: var(--text-light);
+    margin-bottom: 0;
+}
+
+
+/* Mobile adjustments: Move spine to the left to give text more space */
+@media (max-width: 600px) {
+    .hierarchy-flow::before {
+        left: 30px; /* Move spine to the left */
+        transform: translateX(0);
+    }
+    .hierarchy-level::after {
+        left: 30px; /* Move icons to the left */
+        transform: translateX(0);
+    }
+    .hierarchy-level {
+        text-align: left;
+        padding-left: 60px; /* Add padding for the moved icon */
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
