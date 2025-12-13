@@ -1,4 +1,4 @@
-/* events.css - Specific styles for the Events page gallery. 
+/* events.css - Specific styles for the Events page gallery.
    Relies on variables defined in styles.css.
 */
 
@@ -7,10 +7,10 @@
 .event-gallery {
   display: grid;
   grid-template-columns: 1fr; /* Single item per row, as requested */
-  gap: 2.5rem; 
+  gap: 2.5rem;
   margin-top: 3rem;
   margin-bottom: 3rem;
-  padding-top: 2rem; 
+  padding-top: 2rem;
 }
 
 /* Styles for the individual figure/card */
@@ -20,16 +20,16 @@
   overflow: hidden;
   box-shadow: var(--shadow-md);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  
+
   /* Make the card centered and wider for a prominent display */
-  width: 100%; 
+  width: 100%;
   max-width: 900px; /* Limits the max width of the card */
-  margin: 0 auto; 
-  
+  margin: 0 auto;
+
   /* Core Fix: Use Flexbox to manage internal height (keeps figcaption uniform) */
-  display: flex; 
+  display: flex;
   flex-direction: column;
-  height: 100%; 
+  height: 100%;
 }
 
 .event-gallery figure:hover {
@@ -38,26 +38,26 @@
 }
 
 .event-gallery img {
-  width: 100%; 
+  width: 100%;
   aspect-ratio: 16/9; /* Use a fixed aspect ratio for the image */
   object-fit: contain;
-  flex-shrink: 0; 
+  flex-shrink: 0;
 }
 
 .event-gallery figcaption {
   /* Core Fix: Set a minimum height for the caption container */
-  min-height: 80px; 
-  
+  min-height: 80px;
+
   padding: 1.25rem;
   font-weight: 600;
   font-size: 1.1rem;
   text-align: center;
   color: var(--dark-green);
   background-color: var(--very-light-green);
-  
+
   /* Flexbox settings for the caption to vertically center the text */
-  display: flex; 
-  align-items: center; 
+  display: flex;
+  align-items: center;
   justify-content: center;
 }
 

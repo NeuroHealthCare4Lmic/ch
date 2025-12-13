@@ -42,6 +42,3 @@ window.addEventListener('resize', () => {
         document.querySelectorAll('.dropdown.open').forEach(el => el.classList.remove('open'));
     }
 });
-
-
-å√å

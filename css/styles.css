@@ -1,7 +1,7 @@
 :root {
       /* Colors */
       --primary-green: #42A341;
-      --dark-green: #2d7a2d;/*#074C00;*/
+      --dark-green: #074C00;
       --medium-green: #2d7a2d;
       --light-green: #B8E2A3;
       --very-light-green: #E8F5E9;
@@ -39,7 +39,7 @@
 
     /* ==================== HEADER ==================== */
     header {
-      background: linear-gradient(135deg, var(--dark-green) 0%, var(--primary-green) 100%);
+      background: linear-gradient(135deg, var(--light-green) 0%, var(--primary-green) 100%);
       padding: 0.75rem 2rem;
       display: flex;
       justify-content: space-between;
@@ -70,7 +70,7 @@
       background: white;
       border-radius: var(--radius-sm);
       box-shadow: var(--shadow-md);
-      min-width: 220px;
+      min-width: 2x20px;
     }
 
     .dropdown-menu a {
@@ -103,7 +103,7 @@
         position: absolute;
         top: 100%;
         left: 0;
-        margin-top: 0.25rem;
+        margin-top: 0;
         animation: fadeIn 0.2s ease;
         z-index: 100;
       }
@@ -148,7 +148,7 @@
         top: 100%;
         left: 0;
         width: 100%;
-        background: linear-gradient(180deg, var(--dark-green), var(--primary-green));
+        background: linear-gradient(180deg, var(--light-green), var(--primary-green));
         max-height: 85vh;
         overflow-y: auto;
       }
@@ -218,7 +218,7 @@
       font-family: 'Poppins', sans-serif;
       font-size: 1.4rem;
       font-weight: 600;
-      color: var(--dark-green);
+      color: var(--medium-green);
       margin-bottom: 1rem;
     }
 
@@ -248,7 +248,7 @@
     }
 
     .announcements-box::-webkit-scrollbar-thumb:hover {
-      background: var(--dark-green);
+      background: var(--medium-green);
     }
 
     .announcement-item {
@@ -269,7 +269,7 @@
       font-family: 'Poppins', sans-serif;
       font-size: 1rem;
       font-weight: 600;
-      color: var(--dark-green);
+      color: var(--medium-green);
       margin-bottom: 0.5rem;
     }
 
@@ -291,7 +291,7 @@
     .section-title {
       font-family: 'Poppins', sans-serif;
       font-size: 2.5rem;
-      color: var(--dark-green);
+      color: var(--medium-green);
       text-align: center;
       margin-bottom: 2rem;
       position: relative;
@@ -305,7 +305,7 @@
       transform: translateX(-50%);
       width: 100px;
       height: 4px;
-      background: linear-gradient(90deg, var(--dark-green), var(--primary-green));
+      background: linear-gradient(90deg, var(--light-green), var(--primary-green));
     }
 
     .text-content { color: var(--text-light); margin-bottom: 1.5rem; font-size: 1.1rem; }
@@ -334,7 +334,7 @@
     summary::-webkit-details-marker { display: none; }
 
     details[open] summary {
-      background: linear-gradient(135deg, var(--dark-green), var(--primary-green));
+      background: linear-gradient(135deg, var(--light-green), var(--primary-green));
       color: white;
     }
 
@@ -348,20 +348,21 @@
       border-radius: var(--radius-sm);
       box-shadow: var(--shadow-sm);
       transition: var(--transition);
+      color: var(--text-light);
     }
 
     .content-item b {
-      color: var(--dark-green);
+      color: var(--medium-green);
     }
 
     .content-item:hover {
       transform: translateX(5px);
-      border-left-color: var(--dark-green);
+      border-left-color: var(--medium-green);
     }
 
     /* ==================== CONTACT & FOOTER ==================== */
     .contact-section {
-      background: linear-gradient(135deg, var(--dark-green), var(--primary-green));
+      background: linear-gradient(135deg, var(--light-green), var(--primary-green));
       color: white;
       padding: 2rem;
       border-radius: var(--radius-lg);
@@ -395,7 +396,7 @@
     }
 
     footer {
-      background: linear-gradient(135deg, var(--dark-green), var(--primary-green));
+      background: linear-gradient(135deg, var(--light-green), var(--primary-green));
       color: white;
       padding: 3rem 2rem;
       margin-top: 4rem;
@@ -465,7 +466,10 @@
       .section-title { font-size: 1.8rem; }
     }
 
-    .details-content {  padding: 1.5rem; }
+    .details-content {
+      color: var(--text-light);
+      padding: 1.5rem;
+    }
 
     @media (min-width: 921px) and (max-width: 1200px) {
       .main-grid {

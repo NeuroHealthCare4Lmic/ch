@@ -28,7 +28,7 @@
 }
 
 .member-header h3 {
-  color: var(--dark-green);
+  color: var(--medium-green);
   font-family: 'Poppins', sans-serif;
   font-size: 1.8rem;
   margin-bottom: 0.5rem;
@@ -50,10 +50,10 @@
 
 .member-bio p { margin-bottom: 1.5rem; }
 
-.member-bio a { 
-  color: var(--primary-green); 
-  font-weight: 600; 
-  text-decoration: none; 
+.member-bio a {
+  color: var(--primary-green);
+  font-weight: 600;
+  text-decoration: none;
 }
 
 .member-bio a:hover { text-decoration: underline; }

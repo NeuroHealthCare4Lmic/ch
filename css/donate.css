@@ -30,7 +30,7 @@
 .donation-heading {
     font-family: 'Poppins', sans-serif;
     font-size: 2rem;
-    color: var(--dark-green);
+    color: var(--medium-green);
     margin-bottom: 2rem;
 }
 
@@ -68,7 +68,7 @@
 .detail-value {
   font-family: 'Poppins', sans-serif; /* Changed from monospace for clean look */
   font-size: 1.1rem;
-  color: var(--text-dark);
+  color: var(--text-light);
   font-weight: 500;
 }
 

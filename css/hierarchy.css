@@ -83,7 +83,7 @@
 .level-title {
     font-family: 'Poppins', sans-serif;
     font-size: 1.5rem;
-    color: var(--dark-green);
+    color: var(--medium-green);
     margin-top: 1rem; /* Space below the hidden icon */
     margin-bottom: 0.75rem;
 }
