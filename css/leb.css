@@ -49,6 +49,7 @@
       position: relative;
       max-width: 800px;
       margin: 0 auto;
+      min-height: 450px;
     }
 
     /* Profile Card */
@@ -184,7 +185,7 @@
       justify-content: center;
       gap: 0.75rem;
       margin-top: 2rem;
-      margin-bottom: 5rem;
+      margin-bottom: 3rem;
 
     }
 
@@ -210,9 +211,20 @@
 
     /* Responsive */
     @media (max-width: 768px) {
+      .profile-slider-container {
+        min-height: 750px;
+      }
+
       .profile-card {
         grid-template-columns: 1fr;
         min-height: auto;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+      .profile-card.active {
+        position: absolute;
       }
 
       .profile-image {
@@ -227,6 +239,10 @@
         font-size: 1.5rem;
       }
 
+      .profile-description {
+        font-size: 0.9rem;
+      }
+
       .slider-nav {
         width: 40px;
         height: 40px;
@@ -239,5 +255,14 @@
 
       .slider-nav.next {
         right: 10px;
+      }
+
+      .slider-dots {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-bottom: 0;
+        width: 100%;
       }
     }
