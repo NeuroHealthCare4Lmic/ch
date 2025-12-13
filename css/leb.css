@@ -216,7 +216,7 @@
     /* Responsive */
     @media (max-width: 768px) {
       .profile-slider-container {
-        min-height: 850px;
+        min-height: 950px;
         padding-bottom: 80px;
         margin-bottom: 2rem;
       }
@@ -247,6 +247,7 @@
 
       .profile-description {
         font-size: 0.9rem;
+        line-height: 1.6;
       }
 
       .slider-nav {
@@ -276,5 +277,22 @@
         background: rgba(255, 255, 255, 0.9);
         padding: 10px 20px;
         border-radius: 20px;
+      }
+    }
+
+    /* Extra small devices (iPhone SE, etc.) */
+    @media (max-width: 375px) {
+      .profile-slider-container {
+        min-height: 1050px;
+      }
+
+      .profile-description {
+        font-size: 0.85rem;
+        line-height: 1.5;
+      }
+
+      .section-subtitle {
+        margin-top: 2rem;
+        font-size: 1.3rem;
       }
     }
